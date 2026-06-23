@@ -3,1017 +3,493 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estate Mate — Outdoor Living, Landscaping & Home Services in Austin, TX</title>
-  <meta name="description" content="Estate Mate builds and maintains everything outdoors across Austin and the surrounding Hill Country — landscape design & install, hardscaping, ponds & water features, outdoor construction, plus window & gutter cleaning and pressure washing. Free estimates. Call (281) 939-4040.">
+  <title>Estate Mate — Ponds, Landscapes & Outdoor Construction | Austin, TX</title>
+  <meta name="description" content="Estate Mate designs and builds recreational ponds and water features, landscape designs and installs, and outdoor construction, hardscaping and masonry across Austin and the Texas Hill Country. 200+ completed projects. Call (281) 939-4040 to schedule a consultation.">
   <link rel="canonical" href="https://estatematetx.com/">
-  <meta name="theme-color" content="#16432b">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Estate Mate — Outdoor Living & Home Services in Austin, TX">
-  <meta property="og:description" content="Anything outdoors, done right. Landscape design, hardscaping, ponds & water features, outdoor construction, window & gutter cleaning, and pressure washing across Austin & the Hill Country.">
+  <meta property="og:title" content="Estate Mate — Ponds, Landscapes & Outdoor Construction | Austin, TX">
+  <meta property="og:description" content="Recreational ponds and water features, landscape design and install, and outdoor construction, hardscaping and masonry. 200+ projects across Central Texas.">
   <meta property="og:url" content="https://estatematetx.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&w=1200&q=80">
-  <meta name="twitter:card" content="summary_large_image">
-
+  <meta property="og:image" content="https://estatematetx.com/assets/logo-mark.jpg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- LocalBusiness structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    "@type": "LocalBusiness",
     "name": "Estate Mate",
-    "description": "Outdoor living, landscaping, hardscaping, ponds & water features, outdoor construction, window & gutter cleaning, and pressure washing serving Austin and the surrounding Texas Hill Country.",
+    "image": "https://estatematetx.com/assets/logo-mark.jpg",
+    "description": "Recreational ponds and water features, landscape design and install, and outdoor construction, hardscaping and masonry across Austin and the Texas Hill Country.",
+    "telephone": "+1-281-939-4040",
     "url": "https://estatematetx.com/",
-    "email": "admin@estatematetx.com",
-    "telephone": "+12819394040",
-    "image": "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&w=1200&q=80",
-    "priceRange": "$$",
-    "areaServed": [
-      { "@type": "City", "name": "Austin" },
-      { "@type": "City", "name": "Round Rock" },
-      { "@type": "City", "name": "Cedar Park" },
-      { "@type": "City", "name": "Georgetown" },
-      { "@type": "City", "name": "Leander" },
-      { "@type": "City", "name": "Pflugerville" },
-      { "@type": "City", "name": "Dripping Springs" },
-      { "@type": "City", "name": "Lakeway" }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Austin",
-      "addressRegion": "TX",
-      "addressCountry": "US"
-    },
-    "makesOffer": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landscape Design & Installation" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hardscaping & Patios" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ponds & Water Features" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Outdoor Construction" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Window & Gutter Cleaning" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pressure Washing" } }
-    ]
+    "areaServed": "Austin, TX and the Texas Hill Country",
+    "address": { "@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US" }
   }
   </script>
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root{
+      --walnut:#5B5348; --walnut-700:#4A433A; --espresso:#332E28;
+      --cream:#FAF7F1; --bone:#F2ECE2; --sand:#E6DBCA; --stone:#CBBDA8;
+      --ink:#2A251F; --muted:#7A7264; --water:#2E6E6A; --moss:#5C6B43;
+      --line:#E6DCCD; --white:#ffffff;
+      --shadow-sm:0 2px 10px rgba(51,46,40,.06);
+      --shadow:0 18px 50px -20px rgba(51,46,40,.28);
+      --radius:18px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em;color:var(--espresso)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+    .eyebrow{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--walnut)}
+    .btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;font-size:1rem;padding:.95rem 1.7rem;border-radius:999px;transition:.25s ease;cursor:pointer;border:2px solid transparent;white-space:nowrap}
+    .btn-primary{background:var(--walnut);color:var(--cream)}
+    .btn-primary:hover{background:var(--espresso);transform:translateY(-2px);box-shadow:var(--shadow)}
+    .btn-ghost{background:transparent;color:var(--espresso);border-color:var(--stone)}
+    .btn-ghost:hover{border-color:var(--walnut);background:var(--bone)}
+    .btn svg{width:18px;height:18px}
 
-    :root {
-      --pine:      #16432b;
-      --pine-dk:   #0f3120;
-      --pine-mid:  #1f5e3b;
-      --pine-tint: #e9f0ea;
-      --clay:      #c25a34;
-      --clay-lt:   #d97a4f;
-      --clay-tint: #f6e9e2;
-      --bone:      #f7f4ec;
-      --bone-2:    #efe9dc;
-      --sand:      #e3dccb;
-      --ink:       #211f1a;
-      --ink-soft:  #4c4a42;
-      --ink-faint: #8a877c;
-      --line:      #e2dccd;
-      --white:     #ffffff;
+    /* ── HEADER ───────────────────────── */
+    header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.86);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
+    header.scrolled{border-bottom-color:var(--line);box-shadow:var(--shadow-sm)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+    .nav-logo img{height:46px;width:auto}
+    .nav-links{display:flex;align-items:center;gap:2.1rem}
+    .nav-links a.lk{font-weight:600;font-size:.95rem;color:var(--walnut-700);position:relative}
+    .nav-links a.lk::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--walnut);transition:.25s}
+    .nav-links a.lk:hover::after{width:100%}
+    .nav-call{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;background:var(--walnut);color:var(--cream);padding:.65rem 1.25rem;border-radius:999px;transition:.25s}
+    .nav-call:hover{background:var(--espresso);transform:translateY(-1px)}
+    .nav-call svg{width:16px;height:16px}
+    .burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px}
+    .burger span{width:26px;height:2.5px;background:var(--espresso);border-radius:2px;transition:.3s}
 
-      --display: 'Fraunces', Georgia, 'Times New Roman', serif;
-      --sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      --px: 1.4rem;
-      --maxw: 1240px;
-      --r: 4px;
-    }
+    /* ── HERO ───────────────────────── */
+    .hero{position:relative;padding:clamp(4rem,9vw,7.5rem) 0 clamp(3.5rem,7vw,6rem);overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:0;background:
+      radial-gradient(120% 90% at 85% 0%, rgba(46,110,106,.10), transparent 55%),
+      radial-gradient(100% 80% at 0% 100%, rgba(91,83,72,.10), transparent 50%),
+      linear-gradient(180deg,var(--cream),var(--bone))}
+    .hero-topo{position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none}
+    .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .9fr;gap:3rem;align-items:center}
+    .hero h1{font-size:clamp(2.6rem,5.6vw,4.35rem);margin:1.1rem 0 1.2rem}
+    .hero h1 .em{font-style:italic;color:var(--walnut);font-weight:500}
+    .hero-sub{font-size:clamp(1.05rem,1.7vw,1.22rem);color:var(--walnut-700);max-width:36rem;margin-bottom:1.9rem}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:2.2rem;padding-top:1.7rem;border-top:1px solid var(--line)}
+    .ht{display:flex;flex-direction:column}
+    .ht b{font-family:'Fraunces';font-size:1.7rem;color:var(--espresso);line-height:1}
+    .ht span{font-size:.8rem;color:var(--muted);font-weight:600;letter-spacing:.02em;margin-top:.3rem}
+    .hero-card{position:relative;z-index:2;background:var(--white);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+    .hero-card .art{aspect-ratio:4/3.4;background:
+      radial-gradient(80% 70% at 70% 25%, rgba(46,110,106,.22), transparent 60%),
+      linear-gradient(160deg,var(--walnut),var(--espresso));
+      display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden}
+    .hero-card .art img{position:absolute;right:-6%;bottom:-2%;height:104%;width:auto;opacity:.96;filter:drop-shadow(0 12px 24px rgba(0,0,0,.25))}
+    .hero-card .art .ripple{position:absolute;left:-30%;bottom:-30%;width:120%;height:120%;border-radius:50%;border:1.5px solid rgba(255,255,255,.14);box-shadow:0 0 0 28px rgba(255,255,255,.05),0 0 0 70px rgba(255,255,255,.035)}
+    .hero-card .cap{padding:1.1rem 1.3rem;display:flex;align-items:center;gap:.75rem}
+    .hero-card .cap .dot{width:9px;height:9px;border-radius:50%;background:var(--moss);box-shadow:0 0 0 4px rgba(92,107,67,.18);flex:none}
+    .hero-card .cap p{font-size:.92rem;color:var(--walnut-700);font-weight:600}
 
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--sans);
-      background: var(--bone);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.65;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-    ::selection { background: var(--clay); color: #fff; }
+    /* ── TRUST STRIP ───────────────────────── */
+    .strip{background:var(--espresso);color:var(--sand)}
+    .strip .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.3rem;padding:1.05rem 0}
+    .strip .i{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:.92rem}
+    .strip .i svg{width:18px;height:18px;color:var(--stone);flex:none}
 
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding-left: var(--px); padding-right: var(--px); }
+    /* ── SECTION ───────────────────────── */
+    .sec{padding:clamp(4.5rem,9vw,7rem) 0}
+    .sec-head{max-width:42rem;margin-bottom:3rem}
+    .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+    .sec-head h2{font-size:clamp(2rem,3.8vw,3rem);margin:.9rem 0 1rem}
+    .sec-head p{font-size:1.08rem;color:var(--walnut-700)}
 
-    .label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--clay);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .label::before {
-      content: '';
-      width: 26px; height: 1.5px;
-      background: var(--clay);
-      display: inline-block;
-    }
-    .label.on-dark { color: var(--clay-lt); }
-    .label.on-dark::before { background: var(--clay-lt); }
-    .label.center { justify-content: center; }
+    /* ── SERVICES ───────────────────────── */
+    #services{background:var(--bone)}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+    .svc{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:2.1rem 1.9rem;transition:.3s;position:relative;overflow:hidden}
+    .svc::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--walnut),var(--water));transform:scaleX(0);transform-origin:left;transition:.35s}
+    .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--sand)}
+    .svc:hover::before{transform:scaleX(1)}
+    .svc .ic{width:60px;height:60px;border-radius:14px;background:linear-gradient(160deg,var(--bone),var(--sand));display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem;color:var(--walnut)}
+    .svc .ic svg{width:30px;height:30px}
+    .svc h3{font-size:1.4rem;margin-bottom:.6rem}
+    .svc>p{color:var(--muted);font-size:.97rem;margin-bottom:1.1rem}
+    .svc ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+    .svc li{display:flex;gap:.6rem;font-size:.92rem;color:var(--walnut-700);font-weight:500}
+    .svc li svg{width:16px;height:16px;color:var(--moss);flex:none;margin-top:.25rem}
 
-    h1, h2, h3 { font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; line-height: 1.05; }
+    /* ── WORK / GALLERY ───────────────────────── */
+    .gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:1.1rem}
+    .tile{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(155deg,var(--walnut),var(--espresso));display:flex;align-items:flex-end}
+    .tile.tall{grid-row:span 2}
+    .tile.wide{grid-column:span 2}
+    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .tile .ph{position:absolute;inset:0;opacity:.16;background-image:radial-gradient(60% 60% at 30% 20%, rgba(255,255,255,.5), transparent 60%)}
+    .tile .lab{position:relative;z-index:2;padding:1.1rem 1.2rem;color:var(--cream)}
+    .tile .lab span{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);font-weight:700;margin-bottom:.2rem}
+    .tile .lab b{font-family:'Fraunces';font-weight:600;font-size:1.15rem}
+    .gal-note{margin-top:1.4rem;text-align:center;font-size:.92rem;color:var(--muted)}
 
-    /* ── NAV ─────────────────────────────── */
-    nav {
-      position: fixed; inset: 0 0 auto 0;
-      z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.1rem var(--px);
-      transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
-    }
-    nav.scrolled {
-      background: rgba(247,244,236,0.92);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 1px 0 var(--line);
-      padding: 0.7rem var(--px);
-    }
-    .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; flex-shrink: 0; }
-    .brand-mark {
-      width: 38px; height: 38px; border-radius: 50%;
-      background: var(--pine);
-      display: grid; place-items: center;
-      color: var(--bone);
-      flex-shrink: 0;
-      transition: background 0.3s;
-    }
-    .brand-mark svg { width: 21px; height: 21px; }
-    .brand-name {
-      font-family: var(--display);
-      font-size: 1.32rem; font-weight: 700; letter-spacing: -0.02em;
-      color: var(--white);
-      transition: color 0.3s;
-    }
-    nav.scrolled .brand-name { color: var(--pine); }
-    .brand-name em { font-style: italic; color: var(--clay-lt); }
-    nav.scrolled .brand-name em { color: var(--clay); }
+    /* ── PROCESS ───────────────────────── */
+    #process{background:var(--espresso);color:var(--cream)}
+    #process .eyebrow{color:var(--stone)}
+    #process h2{color:var(--cream)}
+    #process .sec-head p{color:var(--sand)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+    .step{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:1.7rem 1.5rem}
+    .step .num{font-family:'Fraunces';font-size:2.4rem;color:var(--stone);line-height:1;margin-bottom:.8rem;font-weight:500}
+    .step h3{color:var(--cream);font-size:1.18rem;margin-bottom:.45rem}
+    .step p{color:var(--sand);font-size:.93rem}
 
-    .nav-links { display: none; align-items: center; gap: 2.1rem; list-style: none; }
-    .nav-links a {
-      font-size: 0.83rem; font-weight: 600; letter-spacing: 0.01em;
-      color: rgba(255,255,255,0.92); text-decoration: none; transition: color 0.2s;
-    }
-    nav.scrolled .nav-links a { color: var(--ink-soft); }
-    .nav-links a:hover { color: var(--clay-lt); }
-    nav.scrolled .nav-links a:hover { color: var(--clay); }
+    /* ── REVIEWS ───────────────────────── */
+    #reviews{background:var(--cream)}
+    .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .rev{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;display:flex;flex-direction:column;gap:1rem}
+    .rev .stars{color:#E0A100;letter-spacing:.14em;font-size:1rem}
+    .rev .q{font-size:1.02rem;color:var(--espresso);line-height:1.55;flex:1}
+    .rev .who{display:flex;align-items:center;gap:.7rem;border-top:1px solid var(--line);padding-top:1rem}
+    .rev .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(150deg,var(--walnut),var(--espresso));color:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces';flex:none}
+    .rev .who b{display:block;font-size:.95rem}
+    .rev .who span{font-size:.8rem;color:var(--muted)}
+    .rev-badges{display:flex;justify-content:center;gap:1.6rem;flex-wrap:wrap;margin-top:2.2rem}
+    .badge{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--walnut-700);font-size:.95rem}
+    .badge .st{color:#E0A100}
 
-    .nav-call {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.82rem; font-weight: 700;
-      color: var(--white) !important;
-      background: var(--clay);
-      padding: 0.6rem 1.15rem; border-radius: 100px;
-      text-decoration: none; white-space: nowrap;
-      transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 6px 18px rgba(194,90,52,0.32);
-    }
-    .nav-call:hover { background: var(--clay-lt); transform: translateY(-1px); }
-    .nav-call svg { width: 14px; height: 14px; }
+    /* ── AREAS ───────────────────────── */
+    #areas{background:var(--bone)}
+    .area-list{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.4rem}
+    .chip{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:.55rem 1.15rem;font-weight:600;font-size:.92rem;color:var(--walnut-700)}
+    .area-note{margin-top:1.5rem;color:var(--muted);font-size:.95rem}
 
-    /* ── HERO ────────────────────────────── */
-    #hero {
-      position: relative;
-      min-height: 100svh;
-      display: flex; align-items: flex-end;
-      color: var(--white);
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background: url('https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&w=2000&q=80') center 60%/cover no-repeat;
-      transform: scale(1.08);
-      will-change: transform;
-    }
-    .hero-bg::after {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        linear-gradient(180deg, rgba(15,49,32,0.55) 0%, rgba(15,49,32,0.12) 28%, rgba(15,49,32,0.30) 55%, rgba(15,49,32,0.88) 100%);
-    }
-    .hero-inner {
-      position: relative; z-index: 2;
-      width: 100%;
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 var(--px) clamp(3rem, 8vh, 6rem);
-    }
-    .hero-eyebrow {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
-      color: rgba(255,255,255,0.85);
-      display: inline-flex; align-items: center; gap: 0.65rem;
-      margin-bottom: 1.5rem; opacity: 0;
-    }
-    .hero-eyebrow::before { content:''; width: 32px; height: 1.5px; background: var(--clay-lt); }
-    .hero h1 {
-      font-size: clamp(2.9rem, 9vw, 6.2rem);
-      font-weight: 600;
-      line-height: 0.98;
-      letter-spacing: -0.025em;
-      max-width: 14ch;
-      margin-bottom: 1.4rem;
-    }
-    .hero h1 .ln { display: block; overflow: hidden; }
-    .hero h1 .ln > span { display: block; transform: translateY(110%); }
-    .hero h1 em { font-style: italic; color: var(--clay-lt); }
-    .hero-sub {
-      font-size: clamp(1rem, 2.2vw, 1.18rem);
-      font-weight: 400;
-      color: rgba(255,255,255,0.9);
-      max-width: 46ch;
-      line-height: 1.7;
-      margin-bottom: 2.2rem;
-      opacity: 0;
-    }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 0.9rem; opacity: 0; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      font-size: 0.92rem; font-weight: 700; letter-spacing: 0.01em;
-      padding: 1rem 1.85rem; border-radius: 100px;
-      text-decoration: none; cursor: pointer; border: none;
-      transition: transform 0.15s, background 0.2s, box-shadow 0.2s, border-color 0.2s, color 0.2s;
-      white-space: nowrap;
-    }
-    .btn-clay { background: var(--clay); color: var(--white); box-shadow: 0 10px 30px rgba(194,90,52,0.4); }
-    .btn-clay:hover { background: var(--clay-lt); transform: translateY(-2px); }
-    .btn-ghost { background: rgba(255,255,255,0.08); color: var(--white); border: 1.5px solid rgba(255,255,255,0.55); backdrop-filter: blur(4px); }
-    .btn-ghost:hover { background: rgba(255,255,255,0.16); border-color: #fff; transform: translateY(-2px); }
-    .btn svg { width: 16px; height: 16px; }
+    /* ── CTA BAND ───────────────────────── */
+    .ctaband{background:linear-gradient(150deg,var(--walnut),var(--espresso));color:var(--cream);text-align:center}
+    .ctaband .wrap{padding:clamp(3.5rem,7vw,5.5rem) 28px}
+    .ctaband h2{color:var(--cream);font-size:clamp(2rem,4vw,3.1rem);margin-bottom:.9rem}
+    .ctaband p{color:var(--sand);font-size:1.12rem;max-width:34rem;margin:0 auto 2rem}
+    .ctaband .phone{font-family:'Fraunces';font-size:clamp(1.9rem,4vw,2.6rem);color:var(--cream);font-weight:600;display:inline-flex;align-items:center;gap:.7rem;margin-top:.4rem}
+    .ctaband .phone svg{width:30px;height:30px;color:var(--stone)}
+    .ctaband .sub{font-size:.9rem;color:var(--stone);margin-top:.5rem;letter-spacing:.04em}
 
-    .hero-scroll {
-      position: absolute; bottom: 1.4rem; left: 50%; transform: translateX(-50%);
-      z-index: 2; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(255,255,255,0.6); display: flex; flex-direction: column; align-items: center; gap: 0.45rem;
-      opacity: 0;
-    }
-    .hero-scroll .line { width: 1px; height: 34px; background: linear-gradient(rgba(255,255,255,0.6), transparent); animation: drop 1.8s ease-in-out infinite; }
-    @keyframes drop { 0%,100% { transform: scaleY(0.4); transform-origin: top; opacity: 0.4; } 50% { transform: scaleY(1); opacity: 1; } }
+    /* ── FOOTER ───────────────────────── */
+    footer{background:var(--espresso);color:var(--sand);padding:3.4rem 0 1.8rem}
+    .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;align-items:start}
+    .foot img.flogo{height:54px;width:auto;margin-bottom:1.1rem}
+    .foot p{font-size:.93rem;color:var(--stone);max-width:24rem}
+    .foot h4{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin-bottom:1rem}
+    .foot ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .foot ul a{font-size:.93rem;color:var(--stone);transition:.2s}
+    .foot ul a:hover{color:var(--cream)}
+    .foot .fcall{font-family:'Fraunces';font-size:1.5rem;color:var(--cream);font-weight:600}
+    .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:2.6rem;padding-top:1.4rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.82rem;color:var(--muted)}
+    .foot-bottom a{color:var(--stone)}
 
-    /* ── MARQUEE ─────────────────────────── */
-    .strip { background: var(--pine); padding: 0.95rem 0; overflow: hidden; border-bottom: 1px solid var(--pine-dk); }
-    .strip-track { display: flex; white-space: nowrap; animation: marq 32s linear infinite; }
-    .strip-item {
-      font-family: var(--display); font-style: italic;
-      font-size: 1.05rem; font-weight: 500;
-      color: rgba(255,255,255,0.86); padding-right: 2.4rem; flex-shrink: 0;
-    }
-    .strip-item .sep { color: var(--clay-lt); margin-left: 2.4rem; font-style: normal; }
-    @keyframes marq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    /* ── reveal ───────────────────────── */
+    .rv{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.16,1,.3,1)}
+    .rv.in{opacity:1;transform:none}
+    .d2{transition-delay:.08s}.d3{transition-delay:.16s}.d4{transition-delay:.24s}
 
-    /* ── INTRO / ABOUT ───────────────────── */
-    #intro { padding: clamp(4.5rem, 9vw, 7.5rem) 0; background: var(--bone); }
-    .intro-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
-    .intro-copy h2 {
-      font-size: clamp(1.9rem, 4.6vw, 3.1rem);
-      margin: 1.1rem 0 1.3rem;
-      color: var(--ink);
-      max-width: 18ch;
+    /* ── responsive ───────────────────────── */
+    @media(max-width:960px){
+      .hero .wrap{grid-template-columns:1fr;gap:2.2rem}
+      .hero-card{max-width:440px}
+      .svc-grid,.rev-grid{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .gal{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+      .tile.wide{grid-column:span 2}
+      .foot{grid-template-columns:1fr 1fr}
     }
-    .intro-copy h2 em { font-style: italic; color: var(--pine); }
-    .intro-copy p { color: var(--ink-soft); font-size: 1.02rem; margin-bottom: 1.1rem; max-width: 52ch; }
-    .intro-sign {
-      margin-top: 1.6rem; display: flex; align-items: center; gap: 0.9rem;
-      padding-top: 1.4rem; border-top: 1px solid var(--line);
-    }
-    .intro-sign .nm { font-family: var(--display); font-style: italic; font-size: 1.15rem; color: var(--pine); }
-    .intro-sign .rl { font-size: 0.78rem; color: var(--ink-faint); }
-    .intro-media {
-      position: relative;
-      border-radius: 6px; overflow: hidden;
-      box-shadow: 0 30px 60px -28px rgba(15,49,32,0.5);
-    }
-    .intro-media img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 4/3.4; }
-    .intro-badge {
-      position: absolute; right: 1rem; bottom: 1rem;
-      background: var(--bone); color: var(--pine);
-      border-radius: 4px; padding: 0.9rem 1.1rem; text-align: center;
-      box-shadow: 0 12px 30px -10px rgba(0,0,0,0.4);
-    }
-    .intro-badge .big { font-family: var(--display); font-size: 1.7rem; font-weight: 700; line-height: 1; }
-    .intro-badge .sm { font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-top: 0.2rem; }
-
-    /* ── SERVICES ────────────────────────── */
-    #services { padding: clamp(4.5rem, 9vw, 7rem) 0; background: var(--bone-2); border-top: 1px solid var(--line); }
-    .sec-head { max-width: 640px; margin-bottom: 3rem; }
-    .sec-head h2 { font-size: clamp(1.9rem, 4.8vw, 3.2rem); margin: 1rem 0 0.9rem; }
-    .sec-head h2 em { font-style: italic; color: var(--pine); }
-    .sec-head p { color: var(--ink-soft); font-size: 1.02rem; }
-
-    .svc-group-label {
-      font-family: var(--display); font-style: italic;
-      font-size: 1.25rem; color: var(--pine);
-      margin: 0 0 1.2rem; display: flex; align-items: center; gap: 0.8rem;
-    }
-    .svc-group-label::after { content:''; flex: 1; height: 1px; background: var(--line); }
-    .svc-group + .svc-group { margin-top: 3rem; }
-    .svc-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
-    .svc {
-      background: var(--bone);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 1.7rem 1.6rem;
-      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-      position: relative;
-      overflow: hidden;
-    }
-    .svc::before {
-      content:''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
-      background: var(--clay); transform: scaleY(0); transform-origin: top; transition: transform 0.3s;
-    }
-    .svc:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(15,49,32,0.45); border-color: transparent; }
-    .svc:hover::before { transform: scaleY(1); }
-    .svc-ic {
-      width: 46px; height: 46px; border-radius: 10px;
-      background: var(--pine-tint); color: var(--pine);
-      display: grid; place-items: center; margin-bottom: 1rem;
-      transition: background 0.3s, color 0.3s;
-    }
-    .svc:hover .svc-ic { background: var(--pine); color: var(--bone); }
-    .svc-ic svg { width: 23px; height: 23px; }
-    .svc h3 { font-size: 1.16rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--ink); }
-    .svc p { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.62; }
-
-    /* ── WORK / GALLERY ──────────────────── */
-    #work { padding: clamp(4.5rem, 9vw, 7rem) 0; background: var(--pine-dk); color: var(--white); }
-    #work .sec-head h2 { color: var(--white); }
-    #work .sec-head h2 em { color: var(--clay-lt); }
-    #work .sec-head p { color: rgba(255,255,255,0.72); }
-    .gal { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-    .tile {
-      position: relative; overflow: hidden; border-radius: 6px;
-      aspect-ratio: 4/3; display: block;
-    }
-    .tile img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-      transition: transform 0.7s cubic-bezier(0.2,0.7,0.2,1);
-    }
-    .tile::after {
-      content:''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(15,49,32,0) 35%, rgba(15,49,32,0.85) 100%);
-    }
-    .tile-cap {
-      position: absolute; left: 1.1rem; bottom: 1rem; z-index: 2;
-      transform: translateY(6px); opacity: 0.92; transition: transform 0.4s, opacity 0.4s;
-    }
-    .tile-cap .t { font-family: var(--display); font-size: 1.18rem; font-weight: 600; line-height: 1.1; }
-    .tile-cap .s { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay-lt); }
-    .tile:hover img { transform: scale(1.07); }
-    .tile:hover .tile-cap { transform: translateY(0); opacity: 1; }
-
-    /* ── STATS ───────────────────────────── */
-    #stats { background: var(--pine); padding: clamp(3rem,6vw,4.5rem) 0; }
-    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-    .stat {
-      text-align: center; padding: 1.6rem 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-      border-right: 1px solid rgba(255,255,255,0.12);
-    }
-    .stat:nth-child(even) { border-right: none; }
-    .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
-    .stat .n { font-family: var(--display); font-size: clamp(2.4rem,7vw,3.6rem); font-weight: 700; color: var(--white); line-height: 1; letter-spacing: -0.02em; }
-    .stat .n .suf { color: var(--clay-lt); font-size: 0.55em; }
-    .stat .l { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-top: 0.5rem; }
-
-    /* ── WHY ─────────────────────────────── */
-    #why { padding: clamp(4.5rem,9vw,7rem) 0; background: var(--bone); }
-    .why-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; margin-top: 2.6rem; }
-    .why { display: flex; gap: 1.1rem; align-items: flex-start; }
-    .why-ic {
-      width: 42px; height: 42px; flex-shrink: 0; border-radius: 50%;
-      background: var(--clay-tint); color: var(--clay);
-      display: grid; place-items: center;
-    }
-    .why-ic svg { width: 20px; height: 20px; }
-    .why h3 { font-size: 1.08rem; font-weight: 600; margin-bottom: 0.3rem; }
-    .why p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.62; }
-
-    /* ── PROCESS ─────────────────────────── */
-    #process { padding: clamp(4.5rem,9vw,7rem) 0; background: var(--bone-2); border-top: 1px solid var(--line); }
-    .steps { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin-top: 2.6rem; counter-reset: s; }
-    .step {
-      background: var(--bone); border: 1px solid var(--line); border-radius: 6px;
-      padding: 1.8rem 1.6rem; position: relative;
-    }
-    .step .num {
-      font-family: var(--display); font-weight: 700; font-style: italic;
-      font-size: 2.4rem; color: var(--sand); line-height: 1; margin-bottom: 0.7rem;
-    }
-    .step h3 { font-size: 1.12rem; font-weight: 600; margin-bottom: 0.4rem; }
-    .step p { font-size: 0.9rem; color: var(--ink-soft); }
-
-    /* ── TESTIMONIALS ────────────────────── */
-    #reviews { padding: clamp(4.5rem,9vw,7rem) 0; background: var(--bone); }
-    .rev-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin-top: 2.6rem; }
-    .rev {
-      background: var(--bone-2); border: 1px solid var(--line); border-radius: 6px;
-      padding: 1.8rem 1.7rem; display: flex; flex-direction: column;
-    }
-    .rev .stars { color: var(--clay); font-size: 0.95rem; letter-spacing: 0.12em; margin-bottom: 0.85rem; }
-    .rev .q { font-family: var(--display); font-size: 1.08rem; line-height: 1.5; color: var(--ink); margin-bottom: 1.3rem; flex: 1; }
-    .rev .who { display: flex; align-items: center; gap: 0.7rem; }
-    .rev .av { width: 38px; height: 38px; border-radius: 50%; background: var(--pine); color: var(--bone); display: grid; place-items: center; font-size: 0.78rem; font-weight: 700; flex-shrink: 0; }
-    .rev .nm { font-size: 0.86rem; font-weight: 700; }
-    .rev .loc { font-size: 0.74rem; color: var(--ink-faint); }
-
-    /* ── AREAS ───────────────────────────── */
-    #areas { padding: clamp(4rem,8vw,6rem) 0; background: var(--bone-2); border-top: 1px solid var(--line); }
-    .pills { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.8rem; }
-    .pill {
-      font-size: 0.8rem; font-weight: 600; color: var(--pine);
-      background: var(--bone); border: 1px solid var(--line);
-      padding: 0.45rem 1rem; border-radius: 100px; transition: all 0.2s; cursor: default;
-    }
-    .pill:hover { background: var(--pine); color: var(--bone); border-color: var(--pine); }
-    .areas-note { margin-top: 1.6rem; font-size: 0.88rem; color: var(--ink-soft); }
-    .areas-note a { color: var(--clay); font-weight: 700; text-decoration: none; }
-
-    /* ── CTA / CONTACT ───────────────────── */
-    #contact {
-      position: relative; padding: clamp(4.5rem,9vw,7rem) 0;
-      background: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=80') center/cover fixed no-repeat;
-      color: var(--white);
-    }
-    #contact::before { content:''; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(15,49,32,0.94), rgba(15,49,32,0.78)); }
-    .contact-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
-    .contact-info h2 { font-size: clamp(2rem,5.4vw,3.4rem); margin: 1.1rem 0 1.1rem; }
-    .contact-info h2 em { font-style: italic; color: var(--clay-lt); }
-    .contact-info > p { color: rgba(255,255,255,0.85); font-size: 1.02rem; max-width: 42ch; margin-bottom: 1.8rem; }
-    .contact-call {
-      display: inline-flex; align-items: center; gap: 0.8rem;
-      font-family: var(--display); font-size: clamp(1.5rem,4.5vw,2rem); font-weight: 700;
-      color: var(--white); text-decoration: none; margin-bottom: 1.3rem;
-    }
-    .contact-call .ph-ic { width: 44px; height: 44px; border-radius: 50%; background: var(--clay); display: grid; place-items: center; flex-shrink: 0; transition: transform 0.2s; }
-    .contact-call:hover .ph-ic { transform: scale(1.08) rotate(-6deg); }
-    .contact-call .ph-ic svg { width: 20px; height: 20px; }
-    .contact-meta { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .contact-meta li { display: flex; align-items: center; gap: 0.7rem; font-size: 0.92rem; color: rgba(255,255,255,0.86); }
-    .contact-meta a { color: rgba(255,255,255,0.86); text-decoration: none; }
-    .contact-meta a:hover { color: var(--clay-lt); }
-    .contact-meta svg { width: 16px; height: 16px; color: var(--clay-lt); flex-shrink: 0; }
-
-    .form-card { background: var(--bone); color: var(--ink); border-radius: 8px; padding: 1.8rem 1.6rem; box-shadow: 0 30px 70px -30px rgba(0,0,0,0.6); }
-    .form-card h3 { font-size: 1.45rem; margin-bottom: 0.3rem; }
-    .form-card .fsub { font-size: 0.86rem; color: var(--ink-soft); margin-bottom: 1.4rem; }
-    .form { display: grid; grid-template-columns: 1fr; gap: 0.85rem; }
-    .fg { display: flex; flex-direction: column; gap: 0.3rem; }
-    .fg.span2 { grid-column: 1 / -1; }
-    .fg label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
-    .fg input, .fg select, .fg textarea {
-      font-family: var(--sans); font-size: 0.92rem; color: var(--ink);
-      background: var(--white); border: 1.5px solid var(--line); border-radius: 5px;
-      padding: 0.72rem 0.85rem; width: 100%; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
-      -webkit-appearance: none; appearance: none;
-    }
-    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--pine); box-shadow: 0 0 0 3px rgba(22,67,43,0.1); }
-    .fg textarea { resize: vertical; min-height: 96px; }
-    .fg select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234c4a42' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.85rem center; padding-right: 2.2rem; }
-    .form .btn-submit {
-      grid-column: 1 / -1; margin-top: 0.3rem;
-      background: var(--clay); color: #fff; font-weight: 700; font-size: 0.95rem;
-      border: none; border-radius: 100px; padding: 0.95rem; cursor: pointer; transition: background 0.2s;
-    }
-    .form .btn-submit:hover { background: var(--clay-lt); }
-    .form .fnote { grid-column: 1/-1; font-size: 0.76rem; color: var(--ink-faint); text-align: center; }
-
-    /* ── FOOTER ──────────────────────────── */
-    footer { background: var(--pine-dk); color: rgba(255,255,255,0.6); padding: clamp(3rem,6vw,4rem) 0 1.6rem; }
-    .foot-top { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-    .foot-brand .brand-name { color: var(--white); }
-    .foot-brand p { font-size: 0.85rem; margin-top: 0.8rem; max-width: 38ch; line-height: 1.7; }
-    .foot-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; }
-    .foot-col h4 { font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.9rem; }
-    .foot-col ul { list-style: none; }
-    .foot-col li { margin-bottom: 0.5rem; }
-    .foot-col a { font-size: 0.85rem; color: rgba(255,255,255,0.62); text-decoration: none; transition: color 0.2s; }
-    .foot-col a:hover { color: var(--clay-lt); }
-    .foot-bottom {
-      margin-top: 2.4rem; padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,0.1);
-      display: flex; flex-direction: column; gap: 0.6rem; align-items: center; text-align: center;
-    }
-    .foot-bottom p { font-size: 0.74rem; color: rgba(255,255,255,0.4); }
-    .foot-bottom .by { color: rgba(255,255,255,0.5); }
-    .foot-bottom .by a { color: var(--clay-lt); text-decoration: none; }
-
-    /* ── REVEAL ──────────────────────────── */
-    .rv { opacity: 0; transform: translateY(26px); }
-    .rv.in { opacity: 1; transform: none; transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2,0.7,0.2,1); }
-    .rv.d1 { transition-delay: 0.08s; } .rv.d2 { transition-delay: 0.16s; } .rv.d3 { transition-delay: 0.24s; } .rv.d4 { transition-delay: 0.32s; }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; }
-      .rv { opacity: 1; transform: none; }
-      .hero h1 .ln > span { transform: none; }
-    }
-
-    /* ── RESPONSIVE ──────────────────────── */
-    @media (min-width: 640px) {
-      :root { --px: 2.2rem; }
-      .svc-grid { grid-template-columns: 1fr 1fr; }
-      .gal { grid-template-columns: 1fr 1fr; }
-      .why-grid { grid-template-columns: 1fr 1fr; }
-      .steps { grid-template-columns: 1fr 1fr; }
-      .rev-grid { grid-template-columns: 1fr 1fr; }
-      .form { grid-template-columns: 1fr 1fr; }
-      .foot-cols { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (min-width: 980px) {
-      :root { --px: 3.2rem; }
-      .nav-links { display: flex; }
-      .intro-grid { grid-template-columns: 1.05fr 0.95fr; gap: 4.5rem; }
-      .svc-grid { grid-template-columns: repeat(3, 1fr); }
-      .gal { grid-template-columns: repeat(3, 1fr); }
-      .gal .tile:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-      .why-grid { grid-template-columns: repeat(4, 1fr); }
-      .stat-grid { grid-template-columns: repeat(4, 1fr); }
-      .stat { border-bottom: none; }
-      .stat:last-child { border-right: none; }
-      .steps { grid-template-columns: repeat(4, 1fr); }
-      .rev-grid { grid-template-columns: repeat(3, 1fr); }
-      .contact-grid { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-      .foot-top { grid-template-columns: 1.4fr 2fr; gap: 4rem; }
+    @media(max-width:680px){
+      .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--cream);flex-direction:column;align-items:flex-start;justify-content:center;gap:1.6rem;padding:3rem 2rem;transform:translateX(100%);transition:.35s;box-shadow:var(--shadow);z-index:60}
+      .nav-links.open{transform:none}
+      .nav-links .nav-call{width:100%;justify-content:center}
+      .burger{display:flex;z-index:61}
+      .svc-grid,.rev-grid,.steps,.gal,.foot{grid-template-columns:1fr}
+      .tile.wide,.tile.tall{grid-column:span 1;grid-row:span 1}
+      .hero-trust{gap:1.1rem}
+      .ht b{font-size:1.45rem}
+      .strip .row{justify-content:flex-start;gap:1rem}
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-  <a href="#hero" class="brand" aria-label="Estate Mate home">
-    <span class="brand-mark">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-3 3.5-5 6.5-5 9.5a5 5 0 0 0 10 0C17 8.5 15 5.5 12 2z"/><path d="M12 22v-7"/></svg>
-    </span>
-    <span class="brand-name">Estate <em>Mate</em></span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Our Work</a></li>
-    <li><a href="#process">How It Works</a></li>
-    <li><a href="#areas">Areas</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="tel:+12819394040" class="nav-call">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.95 12 19.79 19.79 0 0 1 .88 3.4 2 2 0 0 1 2.87 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.05-1.05a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    (281) 939-4040
-  </a>
-</nav>
-
-<!-- HERO -->
-<header id="hero">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Austin &amp; The Texas Hill Country</div>
-    <h1>
-      <span class="ln"><span>Anything</span></span>
-      <span class="ln"><span><em>outdoors</em>, done</span></span>
-      <span class="ln"><span>right.</span></span>
-    </h1>
-    <p class="hero-sub">From landscape design and hardscaping to ponds, outdoor construction, and the home services that keep it all looking sharp — Estate Mate builds and maintains the spaces your home was meant to have.</p>
-    <div class="hero-cta">
-      <a href="tel:+12819394040" class="btn btn-clay">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.95 12 19.79 19.79 0 0 1 .88 3.4 2 2 0 0 1 2.87 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.05-1.05a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Call for a Free Estimate
+<!-- ── HEADER ───────────────────────── -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="nav-logo" href="#top" aria-label="Estate Mate home"><img src="assets/logo-dark.png" alt="Estate Mate"></a>
+    <nav class="nav-links" id="navlinks">
+      <a class="lk" href="#services">Services</a>
+      <a class="lk" href="#work">Our Work</a>
+      <a class="lk" href="#reviews">Reviews</a>
+      <a class="lk" href="#areas">Areas</a>
+      <a class="nav-call" href="tel:+12819394040">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        (281) 939-4040
       </a>
-      <a href="#work" class="btn btn-ghost">See Our Work
-        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
-  <div class="hero-scroll"><span>Scroll</span><span class="line"></span></div>
 </header>
 
-<!-- MARQUEE -->
+<a id="top"></a>
+
+<!-- ── HERO ───────────────────────── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <svg class="hero-topo" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" fill="none">
+    <g stroke="#5B5348" stroke-opacity="0.10" stroke-width="1.4">
+      <path d="M-50 540 Q 360 470 720 540 T 1500 510"/>
+      <path d="M-50 580 Q 360 510 720 580 T 1500 552"/>
+      <path d="M-50 620 Q 360 552 720 620 T 1500 596"/>
+      <path d="M-50 660 Q 360 596 720 660 T 1500 640"/>
+    </g>
+    <g stroke="#2E6E6A" stroke-opacity="0.10" stroke-width="1.4">
+      <path d="M-50 200 Q 300 150 640 210 T 1500 180"/>
+      <path d="M-50 250 Q 300 200 640 260 T 1500 232"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow rv">Austin & the Texas Hill Country</span>
+      <h1 class="rv d2">Ponds, landscapes, and <span class="em">outdoor spaces</span> built to last a lifetime.</h1>
+      <p class="hero-sub rv d3">Estate Mate designs and builds recreational ponds and water features, full landscape installs, and outdoor construction, hardscaping, and masonry. One trusted local crew, from the first sketch to the final stone.</p>
+      <div class="hero-cta rv d4">
+        <a class="btn btn-primary" href="tel:+12819394040">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Call to schedule a consultation
+        </a>
+        <a class="btn btn-ghost" href="#work">See our work</a>
+      </div>
+      <div class="hero-trust rv d4">
+        <div class="ht"><b>200+</b><span>Projects completed</span></div>
+        <div class="ht"><b>Licensed</b><span>& fully insured</span></div>
+        <div class="ht"><b>Local</b><span>Austin-based crew</span></div>
+      </div>
+    </div>
+    <div class="hero-card rv d3">
+      <div class="art">
+        <div class="ripple"></div>
+        <img src="assets/mark.png" alt="">
+      </div>
+      <div class="cap"><span class="dot"></span><p>Design, build, and stonework handled start to finish by one crew.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST STRIP ───────────────────────── -->
 <div class="strip">
-  <div class="strip-track" id="strip">
-    <span class="strip-item">Landscape Design <span class="sep">/</span></span>
-    <span class="strip-item">Hardscaping &amp; Patios <span class="sep">/</span></span>
-    <span class="strip-item">Ponds &amp; Water Features <span class="sep">/</span></span>
-    <span class="strip-item">Outdoor Construction <span class="sep">/</span></span>
-    <span class="strip-item">Pressure Washing <span class="sep">/</span></span>
-    <span class="strip-item">Window &amp; Gutter Cleaning <span class="sep">/</span></span>
-    <span class="strip-item">Landscape Design <span class="sep">/</span></span>
-    <span class="strip-item">Hardscaping &amp; Patios <span class="sep">/</span></span>
-    <span class="strip-item">Ponds &amp; Water Features <span class="sep">/</span></span>
-    <span class="strip-item">Outdoor Construction <span class="sep">/</span></span>
-    <span class="strip-item">Pressure Washing <span class="sep">/</span></span>
-    <span class="strip-item">Window &amp; Gutter Cleaning <span class="sep">/</span></span>
+  <div class="wrap row">
+    <div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Licensed & Insured</div>
+    <div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.8 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg> 200+ Completed Projects</div>
+    <div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving Central Texas</div>
+    <div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free On-Site Consultations</div>
   </div>
 </div>
 
-<!-- INTRO -->
-<section id="intro">
+<!-- ── SERVICES ───────────────────────── -->
+<section class="sec" id="services">
   <div class="wrap">
-    <div class="intro-grid">
-      <div class="intro-copy">
-        <span class="label rv">Austin-based · Locally owned</span>
-        <h2 class="rv d1">One crew for <em>everything</em> outside your front door.</h2>
-        <p class="rv d2">Most homeowners juggle a landscaper, a handyman, a window cleaner, and a contractor — and hope they all show up. Estate Mate is the single call for all of it. We design and install landscapes, build hardscape and water features, take on outdoor construction, and handle the upkeep that keeps your property looking its best.</p>
-        <p class="rv d3">We're a local Austin team that treats your yard like it's our own — straight quotes, clean work, and a finish you'll be proud to host in.</p>
-        <div class="intro-sign rv d4">
-          <div>
-            <div class="nm">Trevor Buckley</div>
-            <div class="rl">Owner, Estate Mate</div>
-          </div>
-        </div>
-      </div>
-      <div class="intro-media rv d2">
-        <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=900&q=80" alt="Lush landscaped garden beds installed by Estate Mate" loading="lazy">
-        <div class="intro-badge">
-          <div class="big">Free</div>
-          <div class="sm">On-Site Estimates</div>
-        </div>
-      </div>
+    <div class="sec-head">
+      <span class="eyebrow rv">What we build</span>
+      <h2 class="rv d2">Three things, done exceptionally well.</h2>
+      <p class="rv d3">We focused our craft on the outdoor work that transforms a property. No subcontractor shuffle, no jack-of-all-trades guesswork. Just specialists who design it, build it, and stand behind it.</p>
+    </div>
+    <div class="svc-grid">
+
+      <article class="svc rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.5s6 6.2 6 10.5a6 6 0 0 1-12 0c0-4.3 6-10.5 6-10.5z"/><path d="M3 18.5c1.6 1 3.4 1 5 0s3.4-1 5 0 3.4 1 5 0" stroke-opacity=".7"/></svg></div>
+        <h3>Recreational Ponds & Water Features</h3>
+        <p>Natural ponds, pondless waterfalls, streams, fountains, and koi-ready builds engineered to run clean and look like they have always been there.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Ecosystem & recreational ponds</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Pondless waterfalls & streams</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Liner, pump, rock & planting</li>
+        </ul>
+      </article>
+
+      <article class="svc rv d2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V11"/><path d="M12 11c0-3 2-5 5-5 0 3-2 5-5 5z"/><path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z"/><path d="M5 22h14"/></svg></div>
+        <h3>Landscape Design & Installation</h3>
+        <p>Full-yard transformations from a blank plan to a planted, polished space. We design the layout, prep the ground, and install every plant, bed, and feature turn-key.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Custom landscape design</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Planting, beds & grading</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Drainage & irrigation-ready</li>
+        </ul>
+      </article>
+
+      <article class="svc rv d3">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M4 21V9l5-3 5 3v12"/><path d="M14 21V11l3-2 3 2v10"/><path d="M7 12h2M7 15h2M7 18h2"/></svg></div>
+        <h3>Outdoor Construction & Masonry</h3>
+        <p>Hardscaping, stonework, and structures built to handle Texas soil and weather. Paver and flagstone patios, retaining walls, fire features, and custom masonry.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Patios, walkways & steps</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Retaining walls & masonry</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Fire pits & outdoor structures</li>
+        </ul>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
+<!-- ── WORK / GALLERY ───────────────────────── -->
+<section class="sec" id="work">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="label rv">What We Do</span>
-      <h2 class="rv d1">Built outside. <em>Finished beautifully.</em></h2>
-      <p class="rv d2">Two sides of one business — the big outdoor builds, and the ongoing care that protects your investment.</p>
-    </div>
-
-    <div class="svc-group">
-      <h3 class="svc-group-label rv">Outdoor Construction &amp; Landscaping</h3>
-      <div class="svc-grid">
-        <div class="svc rv">
-          <div class="svc-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6c-5 6-8 10-8 14a8 8 0 0 0 16 0c0-4-3-8-8-14z"/><path d="M20 34v-9"/></svg></div>
-          <h3>Landscape Design &amp; Install</h3>
-          <p>Full-yard transformations from a blank plan to a planted, polished space. We design it, build it, and plant it — turn-key.</p>
-        </div>
-        <div class="svc rv d1">
-          <div class="svc-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="12" rx="1"/><rect x="22" y="8" width="12" height="12" rx="1"/><rect x="6" y="22" width="12" height="10" rx="1"/><rect x="22" y="22" width="12" height="10" rx="1"/></svg></div>
-          <h3>Hardscaping &amp; Patios</h3>
-          <p>Paver and flagstone patios, walkways, retaining walls, steps, and fire features — engineered to handle Texas soil and last.</p>
-        </div>
-        <div class="svc rv d2">
-          <div class="svc-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="22" r="10"/><path d="M10 22q5-8 10-4 5 4 10-4"/><path d="M8 32q12-6 24 0"/></svg></div>
-          <h3>Ponds &amp; Water Features</h3>
-          <p>Custom ponds, pondless waterfalls, fountains, and koi-ready builds — liner, pump, rock, and planting handled start to finish.</p>
-        </div>
-        <div class="svc rv">
-          <div class="svc-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 34V18l14-10 14 10v16"/><path d="M14 34V24h12v10"/></svg></div>
-          <h3>Outdoor Construction</h3>
-          <p>Pergolas, shade structures, outdoor kitchens, decks, and custom builds. We turn the backyard into a room you actually use.</p>
-        </div>
-        <div class="svc rv d1">
-          <div class="svc-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30c4 0 4-4 8-4s4 4 8 4 4-4 8-4"/><path d="M14 22V8M22 26V8M30 22V12"/></svg></div>
-          <h3>Planting, Sod &amp; Beds</h3>
-          <p>Native and drought-smart plantings, fresh sod, mulch, and bed renovations that look great and hold up to the Hill Country heat.</p>
-        </div>
-        <div class="svc rv d2">
-          <div class="svc-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="10"/><path d="M20 10V6M20 34v-4M10 20H6M34 20h-4"/><path d="M14 20a6 6 0 0 1 6-6"/></svg></div>
-          <h3>Irrigation &amp; Drainage</h3>
-          <p>New irrigation, zone repairs, French drains, and grading to keep water off your foundation and on your plants.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="svc-group">
-      <h3 class="svc-group-label rv">Home Services &amp; Upkeep</h3>
-      <div class="svc-grid">
-        <div class="svc rv">
-          <div class="svc-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="6" width="24" height="28" rx="2"/><path d="M20 6v28M8 20h24"/><path d="M12 11l4 4M28 11l-4 4"/></svg></div>
-          <h3>Window &amp; Gutter Cleaning</h3>
-          <p>Streak-free windows inside and out, plus full gutter clear-outs so the first big storm doesn't end up in your flower beds.</p>
-        </div>
-        <div class="svc rv d1">
-          <div class="svc-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-2 8"/><path d="M20 14c-4 0-7 3-7 7v10h6V24"/><path d="M13 20h-3M26 8l5-3M27 12l6-2"/></svg></div>
-          <h3>Pressure Washing</h3>
-          <p>Driveways, patios, walkways, fences, and siding brought back to life — surface-safe washing that makes the whole property pop.</p>
-        </div>
-        <div class="svc rv d2">
-          <div class="svc-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 34c4 0 4-3 8-3s4 3 8 3 4-3 8-3"/><path d="M20 28c6 0 10-4 10-10S26 8 20 8 10 12 10 18s4 10 10 10z"/><path d="M16 18a4 4 0 0 1 8 0"/></svg></div>
-          <h3>Seasonal Property Care</h3>
-          <p>Recurring cleanups, bed refreshes, and a single point of contact for everything outside — so it stays looking new year-round.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORK -->
-<section id="work">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="label on-dark rv">Selected Work</span>
-      <h2 class="rv d1">Spaces we've <em>brought to life.</em></h2>
-      <p class="rv d2">A look at the kind of outdoor living we build across Austin and the surrounding area.</p>
+    <div class="sec-head center">
+      <span class="eyebrow rv">Our work</span>
+      <h2 class="rv d2">A look at what we have built.</h2>
+      <p class="rv d3">Two hundred projects across Central Texas, from backyard ponds to full estate hardscapes. Here is a selection of recent work.</p>
     </div>
     <div class="gal">
-      <a href="#contact" class="tile rv">
-        <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&w=1100&q=80" alt="Backyard pool and fire feature at dusk with string lighting" loading="lazy">
-        <div class="tile-cap"><div class="s">Outdoor Living</div><div class="t">Backyard Built to Host</div></div>
-      </a>
-      <a href="#contact" class="tile rv d1">
-        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" alt="Rose-lined stone garden pathway" loading="lazy">
-        <div class="tile-cap"><div class="s">Hardscape</div><div class="t">Stone Walkways</div></div>
-      </a>
-      <a href="#contact" class="tile rv d2">
-        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Modern home with landscape lighting at twilight" loading="lazy">
-        <div class="tile-cap"><div class="s">Landscape Lighting</div><div class="t">Curb Appeal at Dusk</div></div>
-      </a>
-      <a href="#contact" class="tile rv">
-        <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=800&q=80" alt="Pool deck and patio surround" loading="lazy">
-        <div class="tile-cap"><div class="s">Pool Surrounds</div><div class="t">Patios &amp; Decking</div></div>
-      </a>
-      <a href="#contact" class="tile rv d1">
-        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80" alt="Lush planted garden beds and greenery" loading="lazy">
-        <div class="tile-cap"><div class="s">Planting</div><div class="t">Gardens &amp; Beds</div></div>
-      </a>
-      <a href="#contact" class="tile rv d2">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Modern home exterior with manicured lawn" loading="lazy">
-        <div class="tile-cap"><div class="s">Full Yard</div><div class="t">Lawn &amp; Landscape</div></div>
-      </a>
+      <div class="tile tall rv"><div class="ph"></div><div class="lab"><span>Ponds & Water</span><b>Backyard pondless waterfall</b></div></div>
+      <div class="tile wide rv d2"><div class="ph"></div><div class="lab"><span>Masonry</span><b>Flagstone patio & seating wall</b></div></div>
+      <div class="tile rv d3"><div class="ph"></div><div class="lab"><span>Landscape</span><b>Front-yard install</b></div></div>
+      <div class="tile rv"><div class="ph"></div><div class="lab"><span>Design</span><b>Garden bed transformation</b></div></div>
+      <div class="tile wide rv d2"><div class="ph"></div><div class="lab"><span>Outdoor Construction</span><b>Stone retaining wall & steps</b></div></div>
+      <div class="tile rv d3"><div class="ph"></div><div class="lab"><span>Ponds & Water</span><b>Koi-ready ecosystem pond</b></div></div>
     </div>
+    <p class="gal-note rv">Project photography from recent Austin-area builds. <a href="tel:+12819394040" style="color:var(--walnut);font-weight:700">Call to see work near you.</a></p>
   </div>
 </section>
 
-<!-- STATS -->
-<section id="stats">
-  <div class="wrap">
-    <div class="stat-grid">
-      <div class="stat rv"><div class="n"><span class="ct" data-to="300">0</span><span class="suf">+</span></div><div class="l">Projects Completed</div></div>
-      <div class="stat rv d1"><div class="n"><span class="ct" data-to="12">0</span><span class="suf">&nbsp;yrs</span></div><div class="l">Working Outdoors</div></div>
-      <div class="stat rv d2"><div class="n"><span class="ct" data-to="25">0</span><span class="suf">+</span></div><div class="l">Cities Served</div></div>
-      <div class="stat rv d3"><div class="n"><span class="ct" data-to="49" data-dec="1">0</span><span class="suf">&nbsp;★</span></div><div class="l">Average Rating</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section id="why">
+<!-- ── PROCESS ───────────────────────── -->
+<section class="sec" id="process">
   <div class="wrap">
     <div class="sec-head">
-      <span class="label rv">Why Estate Mate</span>
-      <h2 class="rv d1">The easiest contractor <em>you'll ever hire.</em></h2>
-    </div>
-    <div class="why-grid">
-      <div class="why rv">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <div><h3>One Call, All Outdoors</h3><p>Design, build, and upkeep under one roof — no chasing five vendors.</p></div>
-      </div>
-      <div class="why rv d1">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
-        <div><h3>Clear, Written Quotes</h3><p>Line-item estimates up front. No vague ballparks, no surprise change orders.</p></div>
-      </div>
-      <div class="why rv d2">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6L5.7 21 8 14 2 9.6h7.6z"/></svg></div>
-        <div><h3>Local &amp; Accountable</h3><p>Austin-owned. You'll talk to the people who actually do the work.</p></div>
-      </div>
-      <div class="why rv d3">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <div><h3>Finished &amp; Clean</h3><p>We don't leave until the site is spotless and you're genuinely happy.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="label rv">How It Works</span>
-      <h2 class="rv d1">From first call to <em>finished space.</em></h2>
+      <span class="eyebrow rv">How it works</span>
+      <h2 class="rv d2">A simple, no-pressure path from idea to finished.</h2>
+      <p class="rv d3">You stay in the loop at every step. We make the build feel easy and the result feel inevitable.</p>
     </div>
     <div class="steps">
-      <div class="step rv"><div class="num">01</div><h3>Free On-Site Visit</h3><p>We walk the property with you, understand the goal, and take measurements — no pressure.</p></div>
-      <div class="step rv d1"><div class="num">02</div><h3>Detailed Quote</h3><p>You get a clear written estimate with scope, materials, and timeline laid out plainly.</p></div>
-      <div class="step rv d2"><div class="num">03</div><h3>We Build It</h3><p>Our crew handles demo, build, plant, and haul-off. We keep you posted the whole way.</p></div>
-      <div class="step rv d3"><div class="num">04</div><h3>Walk &amp; Maintain</h3><p>We walk it with you at the finish — then keep it looking new with ongoing care if you want it.</p></div>
+      <div class="step rv"><div class="num">01</div><h3>Free Consultation</h3><p>We walk the property with you, listen to the vision, and take the measurements that matter.</p></div>
+      <div class="step rv d2"><div class="num">02</div><h3>Design & Quote</h3><p>You get a clear plan and a straight, itemized quote. No surprise change orders later.</p></div>
+      <div class="step rv d3"><div class="num">03</div><h3>We Build It</h3><p>Our own crew handles the dig, the stone, the water, and the planting. Clean site, every day.</p></div>
+      <div class="step rv d4"><div class="num">04</div><h3>Final Walk</h3><p>We walk the finished space with you and make sure it is exactly what you pictured.</p></div>
     </div>
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section id="reviews">
+<!-- ── REVIEWS ───────────────────────── -->
+<section class="sec" id="reviews">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="label rv">Homeowner Reviews</span>
-      <h2 class="rv d1">Neighbors who'd <em>hire us again.</em></h2>
+    <div class="sec-head center">
+      <span class="eyebrow rv">What homeowners say</span>
+      <h2 class="rv d2">Trusted across Austin & the Hill Country.</h2>
+      <p class="rv d3">Two hundred completed projects and a reputation built one neighbor at a time.</p>
     </div>
     <div class="rev-grid">
-      <div class="rev rv">
+      <article class="rev rv">
         <div class="stars">★★★★★</div>
-        <p class="q">"They redid our whole backyard — patio, pondless waterfall, new beds. Came in under two other bids and the quality was better. We use the space every weekend now."</p>
-        <div class="who"><div class="av">JM</div><div><div class="nm">James M.</div><div class="loc">Round Rock, TX</div></div></div>
-      </div>
-      <div class="rev rv d1">
+        <p class="q">From the first pond build to the final stone, every Estate Mate project is held to one standard: work we are proud to put our name on and homeowners are proud to host in.</p>
+        <div class="who"><div class="av">EM</div><div><b>The Estate Mate promise</b><span>Austin & the Hill Country</span></div></div>
+      </article>
+      <article class="rev rv d2">
         <div class="stars">★★★★★</div>
-        <p class="q">"What I love is one call covers everything. They built our pergola, and now they handle the pressure washing and gutters too. Always on time, always clean."</p>
-        <div class="who"><div class="av">SR</div><div><div class="nm">Sarah R.</div><div class="loc">Cedar Park, TX</div></div></div>
-      </div>
-      <div class="rev rv d2">
+        <p class="q">Two hundred completed projects across Central Texas. Licensed, insured, and built by our own crew, never a string of subcontractors you have never met.</p>
+        <div class="who"><div class="av">200</div><div><b>200+ projects delivered</b><span>and counting</span></div></div>
+      </article>
+      <article class="rev rv d3">
         <div class="stars">★★★★★</div>
-        <p class="q">"Trevor's crew terraced a slope we thought was unusable and added a stone walkway. On budget, on time, and they walked every detail with us at the end."</p>
-        <div class="who"><div class="av">DK</div><div><div class="nm">David K.</div><div class="loc">Dripping Springs, TX</div></div></div>
-      </div>
+        <p class="q">See our reviews for yourself. We are proud of our reputation on Google and Facebook, and we would love to earn yours next.</p>
+        <div class="who"><div class="av">★</div><div><b>Rated by real homeowners</b><span>Google &amp; Facebook</span></div></div>
+      </article>
+    </div>
+    <div class="rev-badges rv">
+      <div class="badge"><span class="st">★★★★★</span> Reviewed on Google</div>
+      <div class="badge"><span class="st">★★★★★</span> Reviewed on Facebook</div>
     </div>
   </div>
 </section>
 
-<!-- AREAS -->
-<section id="areas">
+<!-- ── AREAS ───────────────────────── -->
+<section class="sec" id="areas">
   <div class="wrap">
-    <span class="label rv">Service Area</span>
-    <h2 class="rv d1" style="font-size:clamp(1.8rem,4.5vw,2.9rem);margin:1rem 0 0.4rem;">Serving Austin &amp; <em style="font-style:italic;color:var(--pine)">the Hill Country.</em></h2>
-    <div class="pills rv d2">
-      <span class="pill">Austin</span><span class="pill">Round Rock</span><span class="pill">Cedar Park</span>
-      <span class="pill">Georgetown</span><span class="pill">Leander</span><span class="pill">Pflugerville</span>
-      <span class="pill">Hutto</span><span class="pill">Dripping Springs</span><span class="pill">Lakeway</span>
-      <span class="pill">Bee Cave</span><span class="pill">Wimberley</span><span class="pill">Kyle</span>
-      <span class="pill">Buda</span><span class="pill">Liberty Hill</span><span class="pill">Manor</span>
-      <span class="pill">Spicewood</span>
+    <div class="sec-head">
+      <span class="eyebrow rv">Where we work</span>
+      <h2 class="rv d2">Serving Austin and the surrounding Hill Country.</h2>
     </div>
-    <p class="areas-note rv">Just outside the list? <a href="#contact">Reach out</a> — we cover more of Central Texas than you'd expect.</p>
+    <div class="area-list rv d2">
+      <span class="chip">Austin</span>
+      <span class="chip">Round Rock</span>
+      <span class="chip">Cedar Park</span>
+      <span class="chip">Leander</span>
+      <span class="chip">Georgetown</span>
+      <span class="chip">Pflugerville</span>
+      <span class="chip">Lakeway</span>
+      <span class="chip">Bee Cave</span>
+      <span class="chip">Dripping Springs</span>
+      <span class="chip">Buda</span>
+      <span class="chip">Kyle</span>
+      <span class="chip">Spicewood</span>
+    </div>
+    <p class="area-note rv d3">Not on the list? We cover more of Central Texas than most. <a href="tel:+12819394040" style="color:var(--walnut);font-weight:700">Give us a call</a> and we will let you know.</p>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<!-- ── CTA BAND ───────────────────────── -->
+<section class="ctaband">
   <div class="wrap">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <span class="label on-dark rv">Free Estimates</span>
-        <h2 class="rv d1">Let's build something <em>worth coming home to.</em></h2>
-        <p class="rv d2">Tell us what you've got in mind — a full backyard, a single project, or just keeping the place looking sharp. We'll come take a look and send a straight quote.</p>
-        <a href="tel:+12819394040" class="contact-call rv d2">
-          <span class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.95 12 19.79 19.79 0 0 1 .88 3.4 2 2 0 0 1 2.87 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.05-1.05a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-          (281) 939-4040
-        </a>
-        <ul class="contact-meta rv d3">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg><a href="mailto:admin@estatematetx.com">admin@estatematetx.com</a></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Austin, TX &amp; surrounding area</li>
-        </ul>
-      </div>
-
-      <div class="form-card rv d2">
-        <h3>Request a Free Estimate</h3>
-        <p class="fsub">We'll get back to you within one business day — usually same day.</p>
-        <form class="form" onsubmit="emSubmit(event)">
-          <div class="fg"><label>Your Name</label><input type="text" name="name" placeholder="Jordan Smith" required></div>
-          <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="(512) 555-0148" required></div>
-          <div class="fg span2"><label>Email</label><input type="email" name="email" placeholder="you@email.com"></div>
-          <div class="fg span2"><label>City / Neighborhood</label><input type="text" name="city" placeholder="Round Rock, TX"></div>
-          <div class="fg span2"><label>What can we help with?</label>
-            <select name="service">
-              <option value="">Choose a service…</option>
-              <option>Landscape Design &amp; Install</option>
-              <option>Hardscaping / Patio</option>
-              <option>Pond or Water Feature</option>
-              <option>Outdoor Construction (pergola, kitchen, deck)</option>
-              <option>Pressure Washing</option>
-              <option>Window &amp; Gutter Cleaning</option>
-              <option>Ongoing Property Care</option>
-              <option>Not sure yet — just need an estimate</option>
-            </select>
-          </div>
-          <div class="fg span2"><label>Tell us about the project</label><textarea name="message" placeholder="Rough yard size, what you're picturing, timeline, anything that helps us prepare…"></textarea></div>
-          <button type="submit" class="btn-submit">Send My Request →</button>
-          <p class="fnote">Prefer to talk? Call <a href="tel:+12819394040" style="color:var(--clay);font-weight:700;text-decoration:none;">(281) 939-4040</a></p>
-        </form>
-      </div>
-    </div>
+    <h2 class="rv">Ready to start your project?</h2>
+    <p class="rv d2">Tell us what you have in mind, a pond, a patio, a full backyard, or just an idea. We will come take a look and send a straight quote.</p>
+    <a class="phone rv d3" href="tel:+12819394040">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      (281) 939-4040
+    </a>
+    <p class="sub rv d3">Call or text to schedule your free on-site consultation</p>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ── FOOTER ───────────────────────── -->
 <footer>
   <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <a href="#hero" class="brand" style="text-decoration:none;">
-          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-3 3.5-5 6.5-5 9.5a5 5 0 0 0 10 0C17 8.5 15 5.5 12 2z"/><path d="M12 22v-7"/></svg></span>
-          <span class="brand-name">Estate <em>Mate</em></span>
-        </a>
-        <p>Anything outdoors, done right — landscaping, hardscaping, water features, outdoor construction, and home services across Austin and the Texas Hill Country.</p>
+    <div class="foot">
+      <div>
+        <img class="flogo" src="assets/logo-white.png" alt="Estate Mate">
+        <p>Recreational ponds and water features, landscape design and install, and outdoor construction, hardscaping, and masonry across Austin and the Texas Hill Country. Licensed, insured, and proud of every build.</p>
       </div>
-      <div class="foot-cols">
-        <div class="foot-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Landscape Design</a></li>
-            <li><a href="#services">Hardscaping &amp; Patios</a></li>
-            <li><a href="#services">Ponds &amp; Water Features</a></li>
-            <li><a href="#services">Outdoor Construction</a></li>
-            <li><a href="#services">Pressure Washing</a></li>
-            <li><a href="#services">Window &amp; Gutter Cleaning</a></li>
-          </ul>
-        </div>
-        <div class="foot-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#intro">About</a></li>
-            <li><a href="#work">Our Work</a></li>
-            <li><a href="#process">How It Works</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#areas">Service Areas</a></li>
-          </ul>
-        </div>
-        <div class="foot-col">
-          <h4>Get In Touch</h4>
-          <ul>
-            <li><a href="tel:+12819394040">(281) 939-4040</a></li>
-            <li><a href="mailto:admin@estatematetx.com">admin@estatematetx.com</a></li>
-            <li><a href="#contact">Free Estimate</a></li>
-          </ul>
-        </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Ponds & Water Features</a></li>
+          <li><a href="#services">Landscape Design & Install</a></li>
+          <li><a href="#services">Outdoor Construction</a></li>
+          <li><a href="#services">Hardscaping & Masonry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a class="fcall" href="tel:+12819394040">(281) 939-4040</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+        </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <p>© <span id="yr">2026</span> Estate Mate · Austin, TX · All rights reserved.</p>
-      <p class="by">Site by <a href="https://turnkeyweb.org" target="_blank" rel="noopener">Turnkey Web</a></p>
+      <span>© 2026 Estate Mate. All rights reserved.</span>
+      <span>Austin, TX & the Texas Hill Country</span>
     </div>
   </div>
 </footer>
 
 <script>
-  gsap.registerPlugin(ScrollTrigger);
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  /* nav scrolled state */
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
-  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
-
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* hero load timeline */
-  if (!reduce) {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.to('.hero h1 .ln > span', { y: '0%', duration: 0.9, stagger: 0.1, delay: 0.15 })
-      .to('.hero-eyebrow', { opacity: 1, duration: 0.6 }, 0.2)
-      .to('.hero-sub',    { opacity: 1, duration: 0.7 }, '-=0.45')
-      .to('.hero-cta',    { opacity: 1, duration: 0.7 }, '-=0.5')
-      .to('.hero-scroll', { opacity: 1, duration: 0.6 }, '-=0.3');
-
-    /* hero parallax */
-    gsap.to('#heroBg', {
-      yPercent: 14, ease: 'none',
-      scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true }
-    });
-  } else {
-    document.querySelectorAll('.hero h1 .ln > span').forEach(s => s.style.transform = 'none');
-    document.querySelectorAll('.hero-eyebrow,.hero-sub,.hero-cta,.hero-scroll').forEach(e => e.style.opacity = 1);
-  }
-
-  /* scroll reveal */
-  const io = new IntersectionObserver((es) => {
-    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.rv').forEach(el => io.observe(el));
-
-  /* count-up */
-  function countUp(el) {
-    const to = parseFloat(el.dataset.to);
-    const dec = el.dataset.dec === '1';
-    const dur = 1500, t0 = performance.now();
-    const tick = (now) => {
-      const p = Math.min((now - t0) / dur, 1);
-      const e = 1 - Math.pow(1 - p, 3);
-      const v = dec ? (e * (to / 10)) : (e * to);
-      el.textContent = dec ? v.toFixed(1) : Math.floor(v);
-      if (p < 1) requestAnimationFrame(tick);
-      else el.textContent = dec ? (to / 10).toFixed(1) : to;
-    };
-    requestAnimationFrame(tick);
-  }
-  const cio = new IntersectionObserver((es) => {
-    es.forEach(e => { if (e.isIntersecting) { countUp(e.target); cio.unobserve(e.target); } });
-  }, { threshold: 0.4 });
-  document.querySelectorAll('.ct').forEach(el => cio.observe(el));
-
-  /* form */
-  function emSubmit(e) {
-    e.preventDefault();
-    const f = e.target;
-    const b = f.querySelector('.btn-submit');
-    const data = {
-      name: f.name.value, phone: f.phone.value, email: f.email.value,
-      city: f.city.value, service: f.service.value, message: f.message.value
-    };
-    const body = encodeURIComponent(
-      `Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\nCity: ${data.city}\nService: ${data.service}\n\n${data.message}`
-    );
-    window.location.href = `mailto:admin@estatematetx.com?subject=${encodeURIComponent('Estimate request — ' + (data.name || 'Website'))}&body=${body}`;
-    b.textContent = 'Opening your email…';
-    b.style.background = 'var(--pine)';
-    setTimeout(() => { b.textContent = 'Send My Request →'; b.style.background = ''; }, 4000);
-  }
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
+  const burger=document.getElementById('burger'), nav=document.getElementById('navlinks');
+  burger.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
