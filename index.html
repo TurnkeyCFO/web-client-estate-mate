@@ -244,7 +244,14 @@
       .tile.wide,.tile.tall{grid-column:span 1;grid-row:span 1}
       .hero-trust{gap:1.4rem}
       .ht b{font-size:1.5rem}
-      .strip .row{justify-content:flex-start;gap:1rem}
+      /* more breathing room from the screen edges on phones */
+      .wrap{padding-left:34px;padding-right:34px}
+      .nav-logo img{height:44px}
+      .hero h1{font-size:clamp(2.25rem,8.2vw,3.1rem)}
+      /* stack the trust strip so nothing clips at the right edge */
+      .strip .row{flex-direction:column;align-items:flex-start;gap:.6rem}
+      /* recenter the How-It-Works glow into a clean symmetric top wash (no seam) */
+      #process::before{top:-14%;left:50%;right:auto;transform:translateX(-50%);width:170%;height:64%;background:radial-gradient(ellipse at 50% 0%,rgba(116,174,99,.13),transparent 72%)}
       .sec{padding:clamp(3.4rem,11vw,4.6rem) 0}
       .sec-head{margin-bottom:2.2rem}
       .band{min-height:auto;padding:3.6rem 0}
