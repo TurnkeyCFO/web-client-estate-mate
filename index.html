@@ -36,7 +36,7 @@
       --walnut:#5B5348; --walnut-700:#473F35; --espresso:#241F1A;
       --cream:#FBF8F3; --bone:#F1EBDF; --sand:#E7DBC8; --stone:#C8B89E;
       --ink:#2A241D; --muted:#7C7264;
-      --water:#0E8C86; --water-2:#1FB7AC; --green:#3F7B43; --green-2:#74AE63;
+      --water:#3F7B43; --water-2:#C2773B; --green:#3F7B43; --green-2:#74AE63; --green-bri:#4E9150; --clay:#C2773B; --clay-2:#E0A05A;
       --amber:#E8962B; --amber-2:#F5B23E; --gold:#E5A100;
       --line:#EBE2D3; --white:#ffffff;
       --shadow-sm:0 3px 14px rgba(36,31,26,.07);
@@ -86,13 +86,13 @@
     #caustics{position:absolute;inset:0;width:100%;height:100%;z-index:1;mix-blend-mode:screen;opacity:.5;pointer-events:none}
     .hero-overlay{position:absolute;inset:0;z-index:2;background:
       linear-gradient(180deg, rgba(20,17,14,.46) 0%, rgba(20,17,14,.18) 38%, rgba(20,17,14,.62) 78%, rgba(20,17,14,.84) 100%),
-      radial-gradient(120% 80% at 80% 10%, rgba(31,183,172,.18), transparent 55%)}
+      radial-gradient(120% 80% at 80% 10%, rgba(194,119,59,.18), transparent 55%)}
     .hero .wrap{position:relative;z-index:3;width:100%}
     .hero-inner{max-width:46rem}
     .hero h1{font-size:clamp(2.7rem,6.4vw,5rem);color:#fff;margin:1.1rem 0 1.3rem;text-shadow:0 2px 30px rgba(0,0,0,.35)}
-    .hero h1 .em{font-style:italic;font-weight:500;color:#9fe9df}
+    .hero h1 .em{font-style:italic;font-weight:500;color:#EBCB94}
     .hero-sub{font-size:clamp(1.06rem,1.7vw,1.28rem);color:rgba(255,255,255,.92);max-width:38rem;margin-bottom:2rem;text-shadow:0 1px 16px rgba(0,0,0,.4)}
-    .hero .eyebrow{color:#8fe6db}
+    .hero .eyebrow{color:#C2DBA6}
     .hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
     .hero-trust{display:flex;flex-wrap:wrap;gap:2.2rem;margin-top:2.6rem;padding-top:1.8rem;border-top:1px solid rgba(255,255,255,.2)}
     .ht b{font-family:'Fraunces';font-size:1.8rem;color:#fff;line-height:1;display:block}
@@ -143,7 +143,7 @@
     .tile:hover img{transform:scale(1.08)}
     .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,17,14,.7))}
     .tile .lab{position:relative;z-index:2;padding:1.2rem 1.3rem;color:#fff}
-    .tile .lab span{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#9fe9df;font-weight:700;margin-bottom:.25rem}
+    .tile .lab span{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#EBCB94;font-weight:700;margin-bottom:.25rem}
     .tile .lab b{font-family:'Fraunces';font-weight:600;font-size:1.18rem}
     .gal-note{margin-top:1.6rem;text-align:center;font-size:.92rem;color:var(--muted)}
 
@@ -159,7 +159,7 @@
 
     /* ── PROCESS ───────────────────────── */
     #process{background:var(--espresso);color:var(--cream);position:relative;overflow:hidden}
-    #process::before{content:"";position:absolute;top:-30%;right:-10%;width:60%;height:140%;background:radial-gradient(circle,rgba(31,183,172,.12),transparent 65%);pointer-events:none}
+    #process::before{content:"";position:absolute;top:-30%;right:-10%;width:60%;height:140%;background:radial-gradient(circle,rgba(63,123,67,.16),transparent 65%);pointer-events:none}
     #process .eyebrow{color:var(--water-2)}
     #process h2{color:var(--cream)}#process h2 .ac{color:var(--water-2)}
     #process .sec-head p{color:var(--sand)}
@@ -178,7 +178,7 @@
     .rev .stars{color:var(--gold);letter-spacing:.14em;font-size:1.05rem}
     .rev .q{font-size:1.02rem;color:var(--espresso);line-height:1.55;flex:1}
     .rev .who{display:flex;align-items:center;gap:.7rem;border-top:1px solid var(--line);padding-top:1rem}
-    .rev .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,var(--water),var(--green));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces';flex:none;font-size:.95rem}
+    .rev .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,var(--green),var(--clay));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces';flex:none;font-size:.95rem}
     .rev .who b{display:block;font-size:.95rem}
     .rev .who span{font-size:.8rem;color:var(--muted)}
     .rev-badges{display:flex;justify-content:center;gap:1.6rem;flex-wrap:wrap;margin-top:2.4rem}
@@ -193,7 +193,7 @@
     .area-note{margin-top:1.6rem;color:var(--muted);font-size:.95rem}
 
     /* ── CTA BAND ───────────────────────── */
-    .ctaband{background:linear-gradient(135deg,var(--water),var(--green));color:#fff;text-align:center;position:relative;overflow:hidden}
+    .ctaband{background:linear-gradient(135deg,var(--green),var(--clay));color:#fff;text-align:center;position:relative;overflow:hidden}
     .ctaband::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.15),transparent 40%),radial-gradient(circle at 85% 80%,rgba(255,255,255,.12),transparent 45%)}
     .ctaband .wrap{position:relative;padding:clamp(3.8rem,7vw,5.8rem) 28px}
     .ctaband h2{color:#fff;font-size:clamp(2.1rem,4vw,3.2rem);margin-bottom:.9rem}
@@ -213,7 +213,10 @@
     .foot ul a{font-size:.93rem;color:var(--stone);transition:.2s}
     .foot ul a:hover{color:var(--water-2)}
     .foot .fcall{font-family:'Fraunces';font-size:1.55rem;color:#fff;font-weight:600}
-    .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:2.6rem;padding-top:1.4rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.82rem;color:var(--muted)}
+    .foot-logo{display:flex;justify-content:center;padding:2.8rem 0 1.6rem}
+    .foot-logo img{height:120px;width:auto;opacity:.92;transition:.3s}
+    .foot-logo img:hover{opacity:1}
+    .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:1.4rem;padding-top:1.4rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.82rem;color:var(--muted)}
 
     /* ── reveal (hidden until GSAP reveals; JS failsafe shows them) ── */
     .rv{opacity:0;transform:translateY(28px)}
@@ -242,6 +245,13 @@
       .hero-trust{gap:1.4rem}
       .ht b{font-size:1.5rem}
       .strip .row{justify-content:flex-start;gap:1rem}
+      .sec{padding:clamp(3.4rem,11vw,4.6rem) 0}
+      .sec-head{margin-bottom:2.2rem}
+      .band{min-height:auto;padding:3.6rem 0}
+      .band img{height:100%!important}
+      .gal{grid-auto-rows:200px}
+      .foot-logo img{height:78px}
+      .foot-logo{padding:2rem 0 1.2rem}
     }
     @media(prefers-reduced-motion:reduce){
       .hero-media img,.band img{transform:none!important}
@@ -515,6 +525,7 @@
         </ul>
       </div>
     </div>
+    <div class="foot-logo"><img src="assets/logo-white.png" alt="Estate Mate"></div>
     <div class="foot-bottom">
       <span>© 2026 Estate Mate. All rights reserved.</span>
       <span>Austin, TX &amp; the Texas Hill Country</span>
@@ -547,8 +558,9 @@
   if(window.gsap && window.ScrollTrigger){
     gsap.registerPlugin(ScrollTrigger);
 
-    if(window.Lenis && !reduce){
-      const lenis=new Lenis({lerp:.1,wheelMultiplier:1});
+    if(window.Lenis && !reduce && matchMedia('(min-width:881px)').matches){
+      // smooth-scroll on desktop only; mobile keeps native scroll (snappier, no lag)
+      const lenis=new Lenis({lerp:.2,wheelMultiplier:1,syncTouch:false});
       lenis.on('scroll',ScrollTrigger.update);
       gsap.ticker.add((t)=>lenis.raf(t*1000));
       gsap.ticker.lagSmoothing(0);
@@ -582,8 +594,8 @@
     const cv=document.getElementById('caustics');
     const hero=document.querySelector('.hero');
     try{
-      const renderer=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
-      renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+      const renderer=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:false,powerPreference:'low-power'});
+      renderer.setPixelRatio(1);
       const scene=new THREE.Scene();
       const cam=new THREE.OrthographicCamera(-1,1,1,-1,0,1);
       const uni={t:{value:0},res:{value:new THREE.Vector2(1,1)}};
@@ -609,7 +621,7 @@
             c=pow(max(c,0.0),1.7);
             // fade toward edges and bottom so text stays readable
             float fade=smoothstep(0.0,0.45,uv.y)*(1.0-smoothstep(0.55,1.0,uv.y));
-            vec3 col=mix(vec3(0.05,0.45,0.42),vec3(0.55,0.92,0.86),c);
+            vec3 col=mix(vec3(0.16,0.42,0.18),vec3(0.85,0.72,0.38),c);
             gl_FragColor=vec4(col, c*0.42*fade);
           }`
       });
@@ -617,20 +629,21 @@
       scene.add(quad);
       function size(){
         const w=hero.clientWidth,h=hero.clientHeight;
-        renderer.setSize(w,h,false); uni.res.value.set(w*Math.min(devicePixelRatio,2),h*Math.min(devicePixelRatio,2));
+        renderer.setSize(w,h,false); uni.res.value.set(w,h);
       }
       size(); addEventListener('resize',size);
       let running=true, raf;
       const io=new IntersectionObserver(es=>{running=es[0].isIntersecting; if(running)loop();},{threshold:0});
       io.observe(hero);
-      const start=performance.now();
-      function loop(){
+      const start=performance.now(); let last=0;
+      function loop(now){
         if(!running)return;
+        raf=requestAnimationFrame(loop);
+        if(now-last<33)return; last=now;   // cap ~30fps to keep scroll smooth
         uni.t.value=(performance.now()-start)/1000;
         renderer.render(scene,cam);
-        raf=requestAnimationFrame(loop);
       }
-      loop();
+      loop(0);
     }catch(e){ /* WebGL unavailable -> silently skip, photo hero stands alone */ }
   }
 })();
