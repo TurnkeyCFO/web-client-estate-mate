@@ -10,19 +10,19 @@
   <meta property="og:title" content="Estate Mate — Ponds, Landscapes & Outdoor Construction | Austin, TX">
   <meta property="og:description" content="Recreational ponds and water features, landscape design and install, and outdoor construction, hardscaping and masonry. 200+ projects across Central Texas.">
   <meta property="og:url" content="https://estatematetx.com/">
-  <meta property="og:image" content="https://estatematetx.com/assets/logo-mark.jpg">
+  <meta property="og:image" content="https://estatematetx.com/assets/img/pond1.jpg">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Estate Mate",
-    "image": "https://estatematetx.com/assets/logo-mark.jpg",
+    "image": "https://estatematetx.com/assets/img/pond1.jpg",
     "description": "Recreational ponds and water features, landscape design and install, and outdoor construction, hardscaping and masonry across Austin and the Texas Hill Country.",
     "telephone": "+1-281-939-4040",
     "url": "https://estatematetx.com/",
@@ -33,13 +33,15 @@
 
   <style>
     :root{
-      --walnut:#5B5348; --walnut-700:#4A433A; --espresso:#332E28;
-      --cream:#FAF7F1; --bone:#F2ECE2; --sand:#E6DBCA; --stone:#CBBDA8;
-      --ink:#2A251F; --muted:#7A7264; --water:#2E6E6A; --moss:#5C6B43;
-      --line:#E6DCCD; --white:#ffffff;
-      --shadow-sm:0 2px 10px rgba(51,46,40,.06);
-      --shadow:0 18px 50px -20px rgba(51,46,40,.28);
-      --radius:18px;
+      --walnut:#5B5348; --walnut-700:#473F35; --espresso:#241F1A;
+      --cream:#FBF8F3; --bone:#F1EBDF; --sand:#E7DBC8; --stone:#C8B89E;
+      --ink:#2A241D; --muted:#7C7264;
+      --water:#0E8C86; --water-2:#1FB7AC; --green:#3F7B43; --green-2:#74AE63;
+      --amber:#E8962B; --amber-2:#F5B23E; --gold:#E5A100;
+      --line:#EBE2D3; --white:#ffffff;
+      --shadow-sm:0 3px 14px rgba(36,31,26,.07);
+      --shadow:0 24px 60px -22px rgba(36,31,26,.34);
+      --radius:20px;
     }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -47,175 +49,203 @@
     h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em;color:var(--espresso)}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
-    .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-    .eyebrow{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--walnut)}
-    .btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;font-size:1rem;padding:.95rem 1.7rem;border-radius:999px;transition:.25s ease;cursor:pointer;border:2px solid transparent;white-space:nowrap}
-    .btn-primary{background:var(--walnut);color:var(--cream)}
-    .btn-primary:hover{background:var(--espresso);transform:translateY(-2px);box-shadow:var(--shadow)}
-    .btn-ghost{background:transparent;color:var(--espresso);border-color:var(--stone)}
-    .btn-ghost:hover{border-color:var(--walnut);background:var(--bone)}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+    .eyebrow{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--water)}
+    .btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;font-size:1rem;padding:.95rem 1.75rem;border-radius:999px;transition:.25s ease;cursor:pointer;border:2px solid transparent;white-space:nowrap}
+    .btn-amber{background:linear-gradient(135deg,var(--amber-2),var(--amber));color:#3a2708;box-shadow:0 10px 26px -10px rgba(232,150,43,.7)}
+    .btn-amber:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(232,150,43,.8)}
+    .btn-ghost{background:transparent;color:var(--cream);border-color:rgba(255,255,255,.45)}
+    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+    .btn-ghost.dark{color:var(--espresso);border-color:var(--stone)}
+    .btn-ghost.dark:hover{background:var(--bone);border-color:var(--walnut)}
     .btn svg{width:18px;height:18px}
 
     /* ── HEADER ───────────────────────── */
-    header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.86);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
-    header.scrolled{border-bottom-color:var(--line);box-shadow:var(--shadow-sm)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
-    .nav-logo img{height:46px;width:auto}
+    header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.35s}
+    header.solid{background:rgba(251,248,243,.9);backdrop-filter:blur(12px);box-shadow:var(--shadow-sm)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+    .nav-logo img{height:48px;width:auto;transition:.35s}
+    .logo-light{display:block}.logo-dark{display:none}
+    header.solid .logo-light{display:none}header.solid .logo-dark{display:block}
     .nav-links{display:flex;align-items:center;gap:2.1rem}
-    .nav-links a.lk{font-weight:600;font-size:.95rem;color:var(--walnut-700);position:relative}
-    .nav-links a.lk::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--walnut);transition:.25s}
+    .nav-links a.lk{font-weight:600;font-size:.95rem;color:var(--cream);position:relative;transition:.25s}
+    header.solid .nav-links a.lk{color:var(--walnut-700)}
+    .nav-links a.lk::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--water-2);transition:.25s}
     .nav-links a.lk:hover::after{width:100%}
-    .nav-call{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;background:var(--walnut);color:var(--cream);padding:.65rem 1.25rem;border-radius:999px;transition:.25s}
-    .nav-call:hover{background:var(--espresso);transform:translateY(-1px)}
+    .nav-call{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;background:linear-gradient(135deg,var(--amber-2),var(--amber));color:#3a2708;padding:.62rem 1.2rem;border-radius:999px;transition:.25s}
+    .nav-call:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(232,150,43,.8)}
     .nav-call svg{width:16px;height:16px}
-    .burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px}
-    .burger span{width:26px;height:2.5px;background:var(--espresso);border-radius:2px;transition:.3s}
+    .burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;z-index:61}
+    .burger span{width:26px;height:2.5px;background:var(--cream);border-radius:2px;transition:.3s}
+    header.solid .burger span{background:var(--espresso)}
 
     /* ── HERO ───────────────────────── */
-    .hero{position:relative;padding:clamp(4rem,9vw,7.5rem) 0 clamp(3.5rem,7vw,6rem);overflow:hidden}
-    .hero-bg{position:absolute;inset:0;z-index:0;background:
-      radial-gradient(120% 90% at 85% 0%, rgba(46,110,106,.10), transparent 55%),
-      radial-gradient(100% 80% at 0% 100%, rgba(91,83,72,.10), transparent 50%),
-      linear-gradient(180deg,var(--cream),var(--bone))}
-    .hero-topo{position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none}
-    .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .9fr;gap:3rem;align-items:center}
-    .hero h1{font-size:clamp(2.6rem,5.6vw,4.35rem);margin:1.1rem 0 1.2rem}
-    .hero h1 .em{font-style:italic;color:var(--walnut);font-weight:500}
-    .hero-sub{font-size:clamp(1.05rem,1.7vw,1.22rem);color:var(--walnut-700);max-width:36rem;margin-bottom:1.9rem}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;padding-bottom:clamp(3rem,7vw,6rem)}
+    .hero-media{position:absolute;inset:0;z-index:0}
+    .hero-media img{position:absolute;inset:0;width:100%;height:112%;object-fit:cover;will-change:transform}
+    #caustics{position:absolute;inset:0;width:100%;height:100%;z-index:1;mix-blend-mode:screen;opacity:.5;pointer-events:none}
+    .hero-overlay{position:absolute;inset:0;z-index:2;background:
+      linear-gradient(180deg, rgba(20,17,14,.46) 0%, rgba(20,17,14,.18) 38%, rgba(20,17,14,.62) 78%, rgba(20,17,14,.84) 100%),
+      radial-gradient(120% 80% at 80% 10%, rgba(31,183,172,.18), transparent 55%)}
+    .hero .wrap{position:relative;z-index:3;width:100%}
+    .hero-inner{max-width:46rem}
+    .hero h1{font-size:clamp(2.7rem,6.4vw,5rem);color:#fff;margin:1.1rem 0 1.3rem;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+    .hero h1 .em{font-style:italic;font-weight:500;color:#9fe9df}
+    .hero-sub{font-size:clamp(1.06rem,1.7vw,1.28rem);color:rgba(255,255,255,.92);max-width:38rem;margin-bottom:2rem;text-shadow:0 1px 16px rgba(0,0,0,.4)}
+    .hero .eyebrow{color:#8fe6db}
     .hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
-    .hero-trust{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:2.2rem;padding-top:1.7rem;border-top:1px solid var(--line)}
-    .ht{display:flex;flex-direction:column}
-    .ht b{font-family:'Fraunces';font-size:1.7rem;color:var(--espresso);line-height:1}
-    .ht span{font-size:.8rem;color:var(--muted);font-weight:600;letter-spacing:.02em;margin-top:.3rem}
-    .hero-card{position:relative;z-index:2;background:var(--white);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
-    .hero-card .art{aspect-ratio:4/3.4;background:
-      radial-gradient(80% 70% at 70% 25%, rgba(46,110,106,.22), transparent 60%),
-      linear-gradient(160deg,var(--walnut),var(--espresso));
-      display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden}
-    .hero-card .art img{position:absolute;right:-6%;bottom:-2%;height:104%;width:auto;opacity:.96;filter:drop-shadow(0 12px 24px rgba(0,0,0,.25))}
-    .hero-card .art .ripple{position:absolute;left:-30%;bottom:-30%;width:120%;height:120%;border-radius:50%;border:1.5px solid rgba(255,255,255,.14);box-shadow:0 0 0 28px rgba(255,255,255,.05),0 0 0 70px rgba(255,255,255,.035)}
-    .hero-card .cap{padding:1.1rem 1.3rem;display:flex;align-items:center;gap:.75rem}
-    .hero-card .cap .dot{width:9px;height:9px;border-radius:50%;background:var(--moss);box-shadow:0 0 0 4px rgba(92,107,67,.18);flex:none}
-    .hero-card .cap p{font-size:.92rem;color:var(--walnut-700);font-weight:600}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:2.2rem;margin-top:2.6rem;padding-top:1.8rem;border-top:1px solid rgba(255,255,255,.2)}
+    .ht b{font-family:'Fraunces';font-size:1.8rem;color:#fff;line-height:1;display:block}
+    .ht span{font-size:.8rem;color:rgba(255,255,255,.78);font-weight:600;margin-top:.3rem;display:block}
+    .scroll-cue{position:absolute;left:50%;bottom:1.4rem;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.7);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+    .scroll-cue .ln{width:1px;height:34px;background:linear-gradient(rgba(255,255,255,.7),transparent);animation:cue 1.8s ease-in-out infinite}
+    @keyframes cue{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
 
     /* ── TRUST STRIP ───────────────────────── */
     .strip{background:var(--espresso);color:var(--sand)}
-    .strip .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.3rem;padding:1.05rem 0}
+    .strip .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.3rem;padding:1.1rem 0}
     .strip .i{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:.92rem}
-    .strip .i svg{width:18px;height:18px;color:var(--stone);flex:none}
+    .strip .i svg{width:18px;height:18px;color:var(--water-2);flex:none}
 
     /* ── SECTION ───────────────────────── */
-    .sec{padding:clamp(4.5rem,9vw,7rem) 0}
-    .sec-head{max-width:42rem;margin-bottom:3rem}
+    .sec{padding:clamp(4.5rem,9vw,7.5rem) 0}
+    .sec-head{max-width:44rem;margin-bottom:3.2rem}
     .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-    .sec-head h2{font-size:clamp(2rem,3.8vw,3rem);margin:.9rem 0 1rem}
-    .sec-head p{font-size:1.08rem;color:var(--walnut-700)}
+    .sec-head h2{font-size:clamp(2.1rem,4vw,3.2rem);margin:.9rem 0 1rem}
+    .sec-head h2 .ac{color:var(--water);font-style:italic;font-weight:500}
+    .sec-head p{font-size:1.1rem;color:var(--walnut-700)}
 
     /* ── SERVICES ───────────────────────── */
     #services{background:var(--bone)}
-    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
-    .svc{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:2.1rem 1.9rem;transition:.3s;position:relative;overflow:hidden}
-    .svc::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--walnut),var(--water));transform:scaleX(0);transform-origin:left;transition:.35s}
-    .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--sand)}
-    .svc:hover::before{transform:scaleX(1)}
-    .svc .ic{width:60px;height:60px;border-radius:14px;background:linear-gradient(160deg,var(--bone),var(--sand));display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem;color:var(--walnut)}
-    .svc .ic svg{width:30px;height:30px}
-    .svc h3{font-size:1.4rem;margin-bottom:.6rem}
-    .svc>p{color:var(--muted);font-size:.97rem;margin-bottom:1.1rem}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.7rem}
+    .svc{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.35s;display:flex;flex-direction:column}
+    .svc:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--sand)}
+    .svc-photo{position:relative;aspect-ratio:16/11;overflow:hidden}
+    .svc-photo img{width:100%;height:100%;object-fit:cover;transition:.6s cubic-bezier(.16,1,.3,1)}
+    .svc:hover .svc-photo img{transform:scale(1.07)}
+    .svc-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,17,14,.35))}
+    .svc .ic{position:absolute;left:1.1rem;bottom:1.1rem;z-index:2;width:52px;height:52px;border-radius:13px;background:rgba(251,248,243,.92);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;color:var(--water);box-shadow:var(--shadow-sm)}
+    .svc .ic svg{width:27px;height:27px}
+    .svc-body{padding:1.7rem 1.7rem 1.9rem}
+    .svc h3{font-size:1.38rem;margin-bottom:.55rem}
+    .svc>.svc-body>p{color:var(--muted);font-size:.96rem;margin-bottom:1.1rem}
     .svc ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
     .svc li{display:flex;gap:.6rem;font-size:.92rem;color:var(--walnut-700);font-weight:500}
-    .svc li svg{width:16px;height:16px;color:var(--moss);flex:none;margin-top:.25rem}
+    .svc li svg{width:16px;height:16px;color:var(--green);flex:none;margin-top:.25rem}
 
     /* ── WORK / GALLERY ───────────────────────── */
-    .gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:1.1rem}
-    .tile{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(155deg,var(--walnut),var(--espresso));display:flex;align-items:flex-end}
+    #work{background:var(--cream)}
+    .gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:230px;gap:1.1rem}
+    .tile{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end;cursor:pointer}
     .tile.tall{grid-row:span 2}
     .tile.wide{grid-column:span 2}
-    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .tile .ph{position:absolute;inset:0;opacity:.16;background-image:radial-gradient(60% 60% at 30% 20%, rgba(255,255,255,.5), transparent 60%)}
-    .tile .lab{position:relative;z-index:2;padding:1.1rem 1.2rem;color:var(--cream)}
-    .tile .lab span{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);font-weight:700;margin-bottom:.2rem}
-    .tile .lab b{font-family:'Fraunces';font-weight:600;font-size:1.15rem}
-    .gal-note{margin-top:1.4rem;text-align:center;font-size:.92rem;color:var(--muted)}
+    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.7s cubic-bezier(.16,1,.3,1)}
+    .tile:hover img{transform:scale(1.08)}
+    .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,17,14,.7))}
+    .tile .lab{position:relative;z-index:2;padding:1.2rem 1.3rem;color:#fff}
+    .tile .lab span{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#9fe9df;font-weight:700;margin-bottom:.25rem}
+    .tile .lab b{font-family:'Fraunces';font-weight:600;font-size:1.18rem}
+    .gal-note{margin-top:1.6rem;text-align:center;font-size:.92rem;color:var(--muted)}
+
+    /* ── OUTDOOR LIVING BAND ───────────────────────── */
+    .band{position:relative;min-height:60vh;display:flex;align-items:center;overflow:hidden}
+    .band img{position:absolute;inset:0;width:100%;height:120%;object-fit:cover;z-index:0;will-change:transform}
+    .band::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(110deg,rgba(20,17,14,.86),rgba(20,17,14,.4) 70%,transparent)}
+    .band .wrap{position:relative;z-index:2}
+    .band-card{max-width:34rem;color:#fff}
+    .band-card .eyebrow{color:var(--amber-2)}
+    .band-card h2{color:#fff;font-size:clamp(2rem,4vw,3rem);margin:.8rem 0 1rem}
+    .band-card p{color:rgba(255,255,255,.9);font-size:1.08rem;margin-bottom:1.7rem}
 
     /* ── PROCESS ───────────────────────── */
-    #process{background:var(--espresso);color:var(--cream)}
-    #process .eyebrow{color:var(--stone)}
-    #process h2{color:var(--cream)}
+    #process{background:var(--espresso);color:var(--cream);position:relative;overflow:hidden}
+    #process::before{content:"";position:absolute;top:-30%;right:-10%;width:60%;height:140%;background:radial-gradient(circle,rgba(31,183,172,.12),transparent 65%);pointer-events:none}
+    #process .eyebrow{color:var(--water-2)}
+    #process h2{color:var(--cream)}#process h2 .ac{color:var(--water-2)}
     #process .sec-head p{color:var(--sand)}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
-    .step{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:1.7rem 1.5rem}
-    .step .num{font-family:'Fraunces';font-size:2.4rem;color:var(--stone);line-height:1;margin-bottom:.8rem;font-weight:500}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;position:relative;z-index:2}
+    .step{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.8rem 1.5rem;transition:.3s}
+    .step:hover{background:rgba(255,255,255,.07);transform:translateY(-5px)}
+    .step .num{font-family:'Fraunces';font-size:2.5rem;background:linear-gradient(135deg,var(--water-2),var(--green-2));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:.8rem;font-weight:600}
     .step h3{color:var(--cream);font-size:1.18rem;margin-bottom:.45rem}
     .step p{color:var(--sand);font-size:.93rem}
 
     /* ── REVIEWS ───────────────────────── */
-    #reviews{background:var(--cream)}
+    #reviews{background:var(--bone)}
     .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-    .rev{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;display:flex;flex-direction:column;gap:1rem}
-    .rev .stars{color:#E0A100;letter-spacing:.14em;font-size:1rem}
+    .rev{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:1.9rem;display:flex;flex-direction:column;gap:1rem;transition:.3s}
+    .rev:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .rev .stars{color:var(--gold);letter-spacing:.14em;font-size:1.05rem}
     .rev .q{font-size:1.02rem;color:var(--espresso);line-height:1.55;flex:1}
     .rev .who{display:flex;align-items:center;gap:.7rem;border-top:1px solid var(--line);padding-top:1rem}
-    .rev .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(150deg,var(--walnut),var(--espresso));color:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces';flex:none}
+    .rev .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,var(--water),var(--green));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Fraunces';flex:none;font-size:.95rem}
     .rev .who b{display:block;font-size:.95rem}
     .rev .who span{font-size:.8rem;color:var(--muted)}
-    .rev-badges{display:flex;justify-content:center;gap:1.6rem;flex-wrap:wrap;margin-top:2.2rem}
-    .badge{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--walnut-700);font-size:.95rem}
-    .badge .st{color:#E0A100}
+    .rev-badges{display:flex;justify-content:center;gap:1.6rem;flex-wrap:wrap;margin-top:2.4rem}
+    .badge{display:flex;align-items:center;gap:.55rem;font-weight:700;color:var(--walnut-700);font-size:.95rem;background:var(--white);border:1px solid var(--line);padding:.6rem 1.2rem;border-radius:999px}
+    .badge .st{color:var(--gold)}
 
     /* ── AREAS ───────────────────────── */
-    #areas{background:var(--bone)}
+    #areas{background:var(--cream)}
     .area-list{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.4rem}
-    .chip{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:.55rem 1.15rem;font-weight:600;font-size:.92rem;color:var(--walnut-700)}
-    .area-note{margin-top:1.5rem;color:var(--muted);font-size:.95rem}
+    .chip{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:.55rem 1.15rem;font-weight:600;font-size:.92rem;color:var(--walnut-700);transition:.25s}
+    .chip:hover{border-color:var(--water);color:var(--water);transform:translateY(-2px)}
+    .area-note{margin-top:1.6rem;color:var(--muted);font-size:.95rem}
 
     /* ── CTA BAND ───────────────────────── */
-    .ctaband{background:linear-gradient(150deg,var(--walnut),var(--espresso));color:var(--cream);text-align:center}
-    .ctaband .wrap{padding:clamp(3.5rem,7vw,5.5rem) 28px}
-    .ctaband h2{color:var(--cream);font-size:clamp(2rem,4vw,3.1rem);margin-bottom:.9rem}
-    .ctaband p{color:var(--sand);font-size:1.12rem;max-width:34rem;margin:0 auto 2rem}
-    .ctaband .phone{font-family:'Fraunces';font-size:clamp(1.9rem,4vw,2.6rem);color:var(--cream);font-weight:600;display:inline-flex;align-items:center;gap:.7rem;margin-top:.4rem}
-    .ctaband .phone svg{width:30px;height:30px;color:var(--stone)}
-    .ctaband .sub{font-size:.9rem;color:var(--stone);margin-top:.5rem;letter-spacing:.04em}
+    .ctaband{background:linear-gradient(135deg,var(--water),var(--green));color:#fff;text-align:center;position:relative;overflow:hidden}
+    .ctaband::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.15),transparent 40%),radial-gradient(circle at 85% 80%,rgba(255,255,255,.12),transparent 45%)}
+    .ctaband .wrap{position:relative;padding:clamp(3.8rem,7vw,5.8rem) 28px}
+    .ctaband h2{color:#fff;font-size:clamp(2.1rem,4vw,3.2rem);margin-bottom:.9rem}
+    .ctaband p{color:rgba(255,255,255,.92);font-size:1.14rem;max-width:35rem;margin:0 auto 2rem}
+    .ctaband .phone{font-family:'Fraunces';font-size:clamp(2rem,4.4vw,2.9rem);color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:.7rem;margin-top:.4rem;transition:.25s}
+    .ctaband .phone:hover{transform:scale(1.03)}
+    .ctaband .phone svg{width:32px;height:32px}
+    .ctaband .sub{font-size:.92rem;color:rgba(255,255,255,.85);margin-top:.6rem;letter-spacing:.03em}
 
     /* ── FOOTER ───────────────────────── */
-    footer{background:var(--espresso);color:var(--sand);padding:3.4rem 0 1.8rem}
+    footer{background:var(--espresso);color:var(--sand);padding:3.6rem 0 1.8rem}
     .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;align-items:start}
-    .foot img.flogo{height:54px;width:auto;margin-bottom:1.1rem}
+    .foot img.flogo{height:56px;width:auto;margin-bottom:1.1rem}
     .foot p{font-size:.93rem;color:var(--stone);max-width:24rem}
     .foot h4{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin-bottom:1rem}
     .foot ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
     .foot ul a{font-size:.93rem;color:var(--stone);transition:.2s}
-    .foot ul a:hover{color:var(--cream)}
-    .foot .fcall{font-family:'Fraunces';font-size:1.5rem;color:var(--cream);font-weight:600}
+    .foot ul a:hover{color:var(--water-2)}
+    .foot .fcall{font-family:'Fraunces';font-size:1.55rem;color:#fff;font-weight:600}
     .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:2.6rem;padding-top:1.4rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.82rem;color:var(--muted)}
-    .foot-bottom a{color:var(--stone)}
 
-    /* ── reveal ───────────────────────── */
-    .rv{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.16,1,.3,1)}
-    .rv.in{opacity:1;transform:none}
-    .d2{transition-delay:.08s}.d3{transition-delay:.16s}.d4{transition-delay:.24s}
+    /* ── reveal (hidden until GSAP reveals; JS failsafe shows them) ── */
+    .rv{opacity:0;transform:translateY(28px)}
 
     /* ── responsive ───────────────────────── */
     @media(max-width:960px){
-      .hero .wrap{grid-template-columns:1fr;gap:2.2rem}
-      .hero-card{max-width:440px}
       .svc-grid,.rev-grid{grid-template-columns:1fr 1fr}
       .steps{grid-template-columns:1fr 1fr}
-      .gal{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
-      .tile.wide{grid-column:span 2}
+      .gal{grid-template-columns:1fr 1fr;grid-auto-rows:210px}
       .foot{grid-template-columns:1fr 1fr}
     }
+    @media(max-width:880px){
+      #caustics{display:none}
+      .hero-media img,.band img{height:100%!important;transform:none!important}
+    }
     @media(max-width:680px){
-      .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--cream);flex-direction:column;align-items:flex-start;justify-content:center;gap:1.6rem;padding:3rem 2rem;transform:translateX(100%);transition:.35s;box-shadow:var(--shadow);z-index:60}
+      .nav-links{position:fixed;inset:0 0 0 auto;width:80%;max-width:330px;background:var(--cream);flex-direction:column;align-items:flex-start;justify-content:center;gap:1.6rem;padding:3rem 2rem;transform:translateX(100%);transition:.35s;box-shadow:var(--shadow);z-index:60}
       .nav-links.open{transform:none}
+      .nav-links a.lk{color:var(--walnut-700)!important}
       .nav-links .nav-call{width:100%;justify-content:center}
-      .burger{display:flex;z-index:61}
+      .burger{display:flex}
+      .hero{align-items:flex-end;padding-top:104px;padding-bottom:2.4rem;min-height:100svh}
+      .hero h1{font-size:clamp(2.35rem,8.6vw,3.2rem)}
       .svc-grid,.rev-grid,.steps,.gal,.foot{grid-template-columns:1fr}
       .tile.wide,.tile.tall{grid-column:span 1;grid-row:span 1}
-      .hero-trust{gap:1.1rem}
-      .ht b{font-size:1.45rem}
+      .hero-trust{gap:1.4rem}
+      .ht b{font-size:1.5rem}
       .strip .row{justify-content:flex-start;gap:1rem}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .hero-media img,.band img{transform:none!important}
+      .scroll-cue .ln{animation:none}
     }
   </style>
 </head>
@@ -224,7 +254,10 @@
 <!-- ── HEADER ───────────────────────── -->
 <header id="hdr">
   <div class="wrap nav">
-    <a class="nav-logo" href="#top" aria-label="Estate Mate home"><img src="assets/logo-dark.png" alt="Estate Mate"></a>
+    <a class="nav-logo" href="#top" aria-label="Estate Mate home">
+      <img class="logo-light" src="assets/logo-white.png" alt="Estate Mate">
+      <img class="logo-dark" src="assets/logo-dark.png" alt="Estate Mate">
+    </a>
     <nav class="nav-links" id="navlinks">
       <a class="lk" href="#services">Services</a>
       <a class="lk" href="#work">Our Work</a>
@@ -243,51 +276,35 @@
 
 <!-- ── HERO ───────────────────────── -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <svg class="hero-topo" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" fill="none">
-    <g stroke="#5B5348" stroke-opacity="0.10" stroke-width="1.4">
-      <path d="M-50 540 Q 360 470 720 540 T 1500 510"/>
-      <path d="M-50 580 Q 360 510 720 580 T 1500 552"/>
-      <path d="M-50 620 Q 360 552 720 620 T 1500 596"/>
-      <path d="M-50 660 Q 360 596 720 660 T 1500 640"/>
-    </g>
-    <g stroke="#2E6E6A" stroke-opacity="0.10" stroke-width="1.4">
-      <path d="M-50 200 Q 300 150 640 210 T 1500 180"/>
-      <path d="M-50 250 Q 300 200 640 260 T 1500 232"/>
-    </g>
-  </svg>
+  <div class="hero-media"><img id="heroImg" src="assets/img/pond1.jpg" alt="Backyard pond and waterfall built by Estate Mate"></div>
+  <canvas id="caustics"></canvas>
+  <div class="hero-overlay"></div>
   <div class="wrap">
-    <div class="hero-copy">
-      <span class="eyebrow rv">Austin & the Texas Hill Country</span>
-      <h1 class="rv d2">Ponds, landscapes, and <span class="em">outdoor spaces</span> built to last a lifetime.</h1>
-      <p class="hero-sub rv d3">Estate Mate designs and builds recreational ponds and water features, full landscape installs, and outdoor construction, hardscaping, and masonry. One trusted local crew, from the first sketch to the final stone.</p>
-      <div class="hero-cta rv d4">
-        <a class="btn btn-primary" href="tel:+12819394040">
+    <div class="hero-inner">
+      <span class="eyebrow rv">Austin &amp; the Texas Hill Country</span>
+      <h1 class="rv">Ponds, landscapes, and <span class="em">outdoor spaces</span> built to last a lifetime.</h1>
+      <p class="hero-sub rv">Estate Mate designs and builds recreational ponds and water features, full landscape installs, and outdoor construction, hardscaping, and masonry. One trusted local crew, from the first sketch to the final stone.</p>
+      <div class="hero-cta rv">
+        <a class="btn btn-amber" href="tel:+12819394040">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
           Call to schedule a consultation
         </a>
         <a class="btn btn-ghost" href="#work">See our work</a>
       </div>
-      <div class="hero-trust rv d4">
-        <div class="ht"><b>200+</b><span>Projects completed</span></div>
-        <div class="ht"><b>Licensed</b><span>& fully insured</span></div>
-        <div class="ht"><b>Local</b><span>Austin-based crew</span></div>
+      <div class="hero-trust">
+        <div class="ht rv"><b>200+</b><span>Projects completed</span></div>
+        <div class="ht rv"><b>Licensed</b><span>&amp; fully insured</span></div>
+        <div class="ht rv"><b>Local</b><span>Austin-based crew</span></div>
       </div>
-    </div>
-    <div class="hero-card rv d3">
-      <div class="art">
-        <div class="ripple"></div>
-        <img src="assets/mark.png" alt="">
-      </div>
-      <div class="cap"><span class="dot"></span><p>Design, build, and stonework handled start to finish by one crew.</p></div>
     </div>
   </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="ln"></span></div>
 </section>
 
 <!-- ── TRUST STRIP ───────────────────────── -->
 <div class="strip">
   <div class="wrap row">
-    <div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Licensed & Insured</div>
+    <div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Licensed &amp; Insured</div>
     <div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.8 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg> 200+ Completed Projects</div>
     <div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving Central Texas</div>
     <div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free On-Site Consultations</div>
@@ -299,42 +316,57 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow rv">What we build</span>
-      <h2 class="rv d2">Three things, done exceptionally well.</h2>
-      <p class="rv d3">We focused our craft on the outdoor work that transforms a property. No subcontractor shuffle, no jack-of-all-trades guesswork. Just specialists who design it, build it, and stand behind it.</p>
+      <h2 class="rv">Three things, done <span class="ac">exceptionally well.</span></h2>
+      <p class="rv">We focused our craft on the outdoor work that transforms a property. No subcontractor shuffle, no jack-of-all-trades guesswork. Just specialists who design it, build it, and stand behind it.</p>
     </div>
     <div class="svc-grid">
 
       <article class="svc rv">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.5s6 6.2 6 10.5a6 6 0 0 1-12 0c0-4.3 6-10.5 6-10.5z"/><path d="M3 18.5c1.6 1 3.4 1 5 0s3.4-1 5 0 3.4 1 5 0" stroke-opacity=".7"/></svg></div>
-        <h3>Recreational Ponds & Water Features</h3>
-        <p>Natural ponds, pondless waterfalls, streams, fountains, and koi-ready builds engineered to run clean and look like they have always been there.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Ecosystem & recreational ponds</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Pondless waterfalls & streams</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Liner, pump, rock & planting</li>
-        </ul>
+        <div class="svc-photo">
+          <img src="assets/img/pond2.jpg" alt="Pondless waterfall and water feature" loading="lazy">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.5s6 6.2 6 10.5a6 6 0 0 1-12 0c0-4.3 6-10.5 6-10.5z"/><path d="M3 18.5c1.6 1 3.4 1 5 0s3.4-1 5 0 3.4 1 5 0" stroke-opacity=".7"/></svg></div>
+        </div>
+        <div class="svc-body">
+          <h3>Recreational Ponds &amp; Water Features</h3>
+          <p>Natural ponds, pondless waterfalls, streams, fountains, and koi-ready builds engineered to run clean and look like they have always been there.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Ecosystem &amp; recreational ponds</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Pondless waterfalls &amp; streams</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Liner, pump, rock &amp; planting</li>
+          </ul>
+        </div>
       </article>
 
-      <article class="svc rv d2">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V11"/><path d="M12 11c0-3 2-5 5-5 0 3-2 5-5 5z"/><path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z"/><path d="M5 22h14"/></svg></div>
-        <h3>Landscape Design & Installation</h3>
-        <p>Full-yard transformations from a blank plan to a planted, polished space. We design the layout, prep the ground, and install every plant, bed, and feature turn-key.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Custom landscape design</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Planting, beds & grading</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Drainage & irrigation-ready</li>
-        </ul>
+      <article class="svc rv">
+        <div class="svc-photo">
+          <img src="assets/img/yard1.jpg" alt="Landscaped backyard install" loading="lazy">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V11"/><path d="M12 11c0-3 2-5 5-5 0 3-2 5-5 5z"/><path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z"/><path d="M5 22h14"/></svg></div>
+        </div>
+        <div class="svc-body">
+          <h3>Landscape Design &amp; Installation</h3>
+          <p>Full-yard transformations from a blank plan to a planted, polished space. We design the layout, prep the ground, and install every plant, bed, and feature turn-key.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Custom landscape design</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Planting, beds &amp; grading</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Drainage &amp; irrigation-ready</li>
+          </ul>
+        </div>
       </article>
 
-      <article class="svc rv d3">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M4 21V9l5-3 5 3v12"/><path d="M14 21V11l3-2 3 2v10"/><path d="M7 12h2M7 15h2M7 18h2"/></svg></div>
-        <h3>Outdoor Construction & Masonry</h3>
-        <p>Hardscaping, stonework, and structures built to handle Texas soil and weather. Paver and flagstone patios, retaining walls, fire features, and custom masonry.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Patios, walkways & steps</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Retaining walls & masonry</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Fire pits & outdoor structures</li>
-        </ul>
+      <article class="svc rv">
+        <div class="svc-photo">
+          <img src="assets/img/wall2.jpg" alt="Stone masonry and hardscape work" loading="lazy">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M4 21V9l5-3 5 3v12"/><path d="M14 21V11l3-2 3 2v10"/><path d="M7 12h2M7 15h2M7 18h2"/></svg></div>
+        </div>
+        <div class="svc-body">
+          <h3>Outdoor Construction &amp; Masonry</h3>
+          <p>Hardscaping, stonework, and structures built to handle Texas soil and weather. Paver and flagstone patios, retaining walls, fire features, and custom masonry.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Patios, walkways &amp; steps</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Retaining walls &amp; masonry</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Fire pits &amp; outdoor structures</li>
+          </ul>
+        </div>
       </article>
 
     </div>
@@ -346,18 +378,34 @@
   <div class="wrap">
     <div class="sec-head center">
       <span class="eyebrow rv">Our work</span>
-      <h2 class="rv d2">A look at what we have built.</h2>
-      <p class="rv d3">Two hundred projects across Central Texas, from backyard ponds to full estate hardscapes. Here is a selection of recent work.</p>
+      <h2 class="rv">A look at what <span class="ac">we have built.</span></h2>
+      <p class="rv">Two hundred projects across Central Texas, from backyard ponds to full estate hardscapes. Here is a selection of recent work.</p>
     </div>
     <div class="gal">
-      <div class="tile tall rv"><div class="ph"></div><div class="lab"><span>Ponds & Water</span><b>Backyard pondless waterfall</b></div></div>
-      <div class="tile wide rv d2"><div class="ph"></div><div class="lab"><span>Masonry</span><b>Flagstone patio & seating wall</b></div></div>
-      <div class="tile rv d3"><div class="ph"></div><div class="lab"><span>Landscape</span><b>Front-yard install</b></div></div>
-      <div class="tile rv"><div class="ph"></div><div class="lab"><span>Design</span><b>Garden bed transformation</b></div></div>
-      <div class="tile wide rv d2"><div class="ph"></div><div class="lab"><span>Outdoor Construction</span><b>Stone retaining wall & steps</b></div></div>
-      <div class="tile rv d3"><div class="ph"></div><div class="lab"><span>Ponds & Water</span><b>Koi-ready ecosystem pond</b></div></div>
+      <div class="tile tall rv"><img src="assets/img/koi1.jpg" alt="Koi ecosystem pond" loading="lazy"><div class="lab"><span>Ponds &amp; Water</span><b>Koi-ready ecosystem pond</b></div></div>
+      <div class="tile wide rv"><img src="assets/img/patio2.jpg" alt="Stone steps and hardscape" loading="lazy"><div class="lab"><span>Masonry</span><b>Natural stone steps &amp; patio</b></div></div>
+      <div class="tile rv"><img src="assets/img/yard1.jpg" alt="Front yard landscape install" loading="lazy"><div class="lab"><span>Landscape</span><b>Front-yard install</b></div></div>
+      <div class="tile rv"><img src="assets/img/garden1.jpg" alt="Outdoor living and pool surround" loading="lazy"><div class="lab"><span>Design</span><b>Outdoor living space</b></div></div>
+      <div class="tile wide rv"><img src="assets/img/wall1.jpg" alt="Stone retaining wall" loading="lazy"><div class="lab"><span>Outdoor Construction</span><b>Dry-stack retaining wall</b></div></div>
+      <div class="tile rv"><img src="assets/img/pond2.jpg" alt="Pondless waterfall" loading="lazy"><div class="lab"><span>Ponds &amp; Water</span><b>Backyard pondless waterfall</b></div></div>
     </div>
-    <p class="gal-note rv">Project photography from recent Austin-area builds. <a href="tel:+12819394040" style="color:var(--walnut);font-weight:700">Call to see work near you.</a></p>
+    <p class="gal-note rv">A few placeholder shots while we add Estate Mate's real project photos. <a href="tel:+12819394040" style="color:var(--water);font-weight:700">Call to see work near you.</a></p>
+  </div>
+</section>
+
+<!-- ── OUTDOOR LIVING BAND ───────────────────────── -->
+<section class="band">
+  <img id="bandImg" src="assets/img/fire1.jpg" alt="Outdoor fire feature at dusk">
+  <div class="wrap">
+    <div class="band-card">
+      <span class="eyebrow rv">One crew, one standard</span>
+      <h2 class="rv">Spaces your home was meant to have.</h2>
+      <p class="rv">A pond you can hear from the porch. A patio built for Sunday evenings. A wall that still looks sharp in twenty years. We build the outdoors you actually live in, and we treat your property like it is our own.</p>
+      <a class="btn btn-amber rv" href="tel:+12819394040">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Start a conversation
+      </a>
+    </div>
   </div>
 </section>
 
@@ -366,14 +414,14 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow rv">How it works</span>
-      <h2 class="rv d2">A simple, no-pressure path from idea to finished.</h2>
-      <p class="rv d3">You stay in the loop at every step. We make the build feel easy and the result feel inevitable.</p>
+      <h2 class="rv">A simple, no-pressure <span class="ac">path to finished.</span></h2>
+      <p class="rv">You stay in the loop at every step. We make the build feel easy and the result feel inevitable.</p>
     </div>
     <div class="steps">
       <div class="step rv"><div class="num">01</div><h3>Free Consultation</h3><p>We walk the property with you, listen to the vision, and take the measurements that matter.</p></div>
-      <div class="step rv d2"><div class="num">02</div><h3>Design & Quote</h3><p>You get a clear plan and a straight, itemized quote. No surprise change orders later.</p></div>
-      <div class="step rv d3"><div class="num">03</div><h3>We Build It</h3><p>Our own crew handles the dig, the stone, the water, and the planting. Clean site, every day.</p></div>
-      <div class="step rv d4"><div class="num">04</div><h3>Final Walk</h3><p>We walk the finished space with you and make sure it is exactly what you pictured.</p></div>
+      <div class="step rv"><div class="num">02</div><h3>Design &amp; Quote</h3><p>You get a clear plan and a straight, itemized quote. No surprise change orders later.</p></div>
+      <div class="step rv"><div class="num">03</div><h3>We Build It</h3><p>Our own crew handles the dig, the stone, the water, and the planting. Clean site, every day.</p></div>
+      <div class="step rv"><div class="num">04</div><h3>Final Walk</h3><p>We walk the finished space with you and make sure it is exactly what you pictured.</p></div>
     </div>
   </div>
 </section>
@@ -383,21 +431,21 @@
   <div class="wrap">
     <div class="sec-head center">
       <span class="eyebrow rv">What homeowners say</span>
-      <h2 class="rv d2">Trusted across Austin & the Hill Country.</h2>
-      <p class="rv d3">Two hundred completed projects and a reputation built one neighbor at a time.</p>
+      <h2 class="rv">Trusted across <span class="ac">Austin &amp; the Hill Country.</span></h2>
+      <p class="rv">Two hundred completed projects and a reputation built one neighbor at a time.</p>
     </div>
     <div class="rev-grid">
       <article class="rev rv">
         <div class="stars">★★★★★</div>
         <p class="q">From the first pond build to the final stone, every Estate Mate project is held to one standard: work we are proud to put our name on and homeowners are proud to host in.</p>
-        <div class="who"><div class="av">EM</div><div><b>The Estate Mate promise</b><span>Austin & the Hill Country</span></div></div>
+        <div class="who"><div class="av">EM</div><div><b>The Estate Mate promise</b><span>Austin &amp; the Hill Country</span></div></div>
       </article>
-      <article class="rev rv d2">
+      <article class="rev rv">
         <div class="stars">★★★★★</div>
         <p class="q">Two hundred completed projects across Central Texas. Licensed, insured, and built by our own crew, never a string of subcontractors you have never met.</p>
         <div class="who"><div class="av">200</div><div><b>200+ projects delivered</b><span>and counting</span></div></div>
       </article>
-      <article class="rev rv d3">
+      <article class="rev rv">
         <div class="stars">★★★★★</div>
         <p class="q">See our reviews for yourself. We are proud of our reputation on Google and Facebook, and we would love to earn yours next.</p>
         <div class="who"><div class="av">★</div><div><b>Rated by real homeowners</b><span>Google &amp; Facebook</span></div></div>
@@ -415,23 +463,15 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow rv">Where we work</span>
-      <h2 class="rv d2">Serving Austin and the surrounding Hill Country.</h2>
+      <h2 class="rv">Serving Austin and the <span class="ac">surrounding Hill Country.</span></h2>
     </div>
-    <div class="area-list rv d2">
-      <span class="chip">Austin</span>
-      <span class="chip">Round Rock</span>
-      <span class="chip">Cedar Park</span>
-      <span class="chip">Leander</span>
-      <span class="chip">Georgetown</span>
-      <span class="chip">Pflugerville</span>
-      <span class="chip">Lakeway</span>
-      <span class="chip">Bee Cave</span>
-      <span class="chip">Dripping Springs</span>
-      <span class="chip">Buda</span>
-      <span class="chip">Kyle</span>
-      <span class="chip">Spicewood</span>
+    <div class="area-list">
+      <span class="chip rv">Austin</span><span class="chip rv">Round Rock</span><span class="chip rv">Cedar Park</span>
+      <span class="chip rv">Leander</span><span class="chip rv">Georgetown</span><span class="chip rv">Pflugerville</span>
+      <span class="chip rv">Lakeway</span><span class="chip rv">Bee Cave</span><span class="chip rv">Dripping Springs</span>
+      <span class="chip rv">Buda</span><span class="chip rv">Kyle</span><span class="chip rv">Spicewood</span>
     </div>
-    <p class="area-note rv d3">Not on the list? We cover more of Central Texas than most. <a href="tel:+12819394040" style="color:var(--walnut);font-weight:700">Give us a call</a> and we will let you know.</p>
+    <p class="area-note rv">Not on the list? We cover more of Central Texas than most. <a href="tel:+12819394040" style="color:var(--water);font-weight:700">Give us a call</a> and we will let you know.</p>
   </div>
 </section>
 
@@ -439,12 +479,12 @@
 <section class="ctaband">
   <div class="wrap">
     <h2 class="rv">Ready to start your project?</h2>
-    <p class="rv d2">Tell us what you have in mind, a pond, a patio, a full backyard, or just an idea. We will come take a look and send a straight quote.</p>
-    <a class="phone rv d3" href="tel:+12819394040">
+    <p class="rv">Tell us what you have in mind, a pond, a patio, a full backyard, or just an idea. We will come take a look and send a straight quote.</p>
+    <a class="phone rv" href="tel:+12819394040">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
       (281) 939-4040
     </a>
-    <p class="sub rv d3">Call or text to schedule your free on-site consultation</p>
+    <p class="sub rv">Call or text to schedule your free on-site consultation</p>
   </div>
 </section>
 
@@ -459,10 +499,10 @@
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">Ponds & Water Features</a></li>
-          <li><a href="#services">Landscape Design & Install</a></li>
+          <li><a href="#services">Ponds &amp; Water Features</a></li>
+          <li><a href="#services">Landscape Design &amp; Install</a></li>
           <li><a href="#services">Outdoor Construction</a></li>
-          <li><a href="#services">Hardscaping & Masonry</a></li>
+          <li><a href="#services">Hardscaping &amp; Masonry</a></li>
         </ul>
       </div>
       <div>
@@ -477,19 +517,123 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Estate Mate. All rights reserved.</span>
-      <span>Austin, TX & the Texas Hill Country</span>
+      <span>Austin, TX &amp; the Texas Hill Country</span>
     </div>
   </div>
 </footer>
 
+<!-- ── PREMIUM MOTION STACK ───────────────────────── -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const desktop = matchMedia('(min-width:881px) and (hover:hover)').matches;
+
+  // header solid on scroll
   const hdr=document.getElementById('hdr');
-  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
+  const onScroll=()=>hdr.classList.toggle('solid', scrollY>60);
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // mobile menu
   const burger=document.getElementById('burger'), nav=document.getElementById('navlinks');
   burger.addEventListener('click',()=>nav.classList.toggle('open'));
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  // ── GSAP + Lenis ──
+  const groupSel=['.svc-grid','.gal','.steps','.rev-grid','.area-list'];
+  if(window.gsap && window.ScrollTrigger){
+    gsap.registerPlugin(ScrollTrigger);
+
+    if(window.Lenis && !reduce){
+      const lenis=new Lenis({lerp:.1,wheelMultiplier:1});
+      lenis.on('scroll',ScrollTrigger.update);
+      gsap.ticker.add((t)=>lenis.raf(t*1000));
+      gsap.ticker.lagSmoothing(0);
+    }
+
+    // individual reveals (skip elements handled by a stagger group)
+    gsap.utils.toArray('.rv').forEach(el=>{
+      if(el.closest(groupSel.join(',')))return;
+      gsap.fromTo(el,{y:28,opacity:0},{y:0,opacity:1,duration:.9,ease:'power3.out',
+        scrollTrigger:{trigger:el,start:'top 90%'}});
+    });
+    // stagger groups
+    groupSel.forEach(sel=>{
+      const c=document.querySelector(sel); if(!c)return;
+      gsap.fromTo(c.children,{y:34,opacity:0},{y:0,opacity:1,duration:.8,ease:'power3.out',stagger:.08,
+        scrollTrigger:{trigger:c,start:'top 84%'}});
+    });
+    // hero + band image parallax
+    if(!reduce){
+      gsap.to('#heroImg',{yPercent:10,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+      gsap.to('#bandImg',{yPercent:-12,ease:'none',scrollTrigger:{trigger:'.band',start:'top bottom',end:'bottom top',scrub:true}});
+    }
+    ScrollTrigger.refresh();
+  } else {
+    // gsap failed to load -> ensure content visible
+    document.querySelectorAll('.rv').forEach(e=>{e.style.opacity=1;e.style.transform='none';});
+  }
+
+  // ── Three.js water-shimmer (contained hero canvas; desktop only) ──
+  if(desktop && !reduce && window.THREE){
+    const cv=document.getElementById('caustics');
+    const hero=document.querySelector('.hero');
+    try{
+      const renderer=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+      renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+      const scene=new THREE.Scene();
+      const cam=new THREE.OrthographicCamera(-1,1,1,-1,0,1);
+      const uni={t:{value:0},res:{value:new THREE.Vector2(1,1)}};
+      const mat=new THREE.ShaderMaterial({
+        transparent:true, uniforms:uni,
+        vertexShader:'void main(){gl_Position=vec4(position,1.0);}',
+        fragmentShader:`
+          precision highp float; uniform float t; uniform vec2 res;
+          // layered caustic light approximation
+          float caustic(vec2 p){
+            float v=0.0; vec2 q=p;
+            for(int i=0;i<4;i++){
+              float fi=float(i);
+              q+=vec2(sin(q.y*1.7+t*0.6+fi),cos(q.x*1.6-t*0.5+fi))*0.35;
+              v+=1.0/length(vec2(sin(q.x*2.0+t*0.4),cos(q.y*2.0-t*0.3))+1.6);
+            }
+            return v*0.16;
+          }
+          void main(){
+            vec2 uv=gl_FragCoord.xy/res.xy;
+            vec2 p=(uv-0.5)*vec2(res.x/res.y,1.0)*6.0;
+            float c=caustic(p);
+            c=pow(max(c,0.0),1.7);
+            // fade toward edges and bottom so text stays readable
+            float fade=smoothstep(0.0,0.45,uv.y)*(1.0-smoothstep(0.55,1.0,uv.y));
+            vec3 col=mix(vec3(0.05,0.45,0.42),vec3(0.55,0.92,0.86),c);
+            gl_FragColor=vec4(col, c*0.42*fade);
+          }`
+      });
+      const quad=new THREE.Mesh(new THREE.PlaneGeometry(2,2),mat);
+      scene.add(quad);
+      function size(){
+        const w=hero.clientWidth,h=hero.clientHeight;
+        renderer.setSize(w,h,false); uni.res.value.set(w*Math.min(devicePixelRatio,2),h*Math.min(devicePixelRatio,2));
+      }
+      size(); addEventListener('resize',size);
+      let running=true, raf;
+      const io=new IntersectionObserver(es=>{running=es[0].isIntersecting; if(running)loop();},{threshold:0});
+      io.observe(hero);
+      const start=performance.now();
+      function loop(){
+        if(!running)return;
+        uni.t.value=(performance.now()-start)/1000;
+        renderer.render(scene,cam);
+        raf=requestAnimationFrame(loop);
+      }
+      loop();
+    }catch(e){ /* WebGL unavailable -> silently skip, photo hero stands alone */ }
+  }
+})();
 </script>
 </body>
 </html>
